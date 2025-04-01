@@ -1,0 +1,14 @@
+.container {
+    display: flex;
+}
+
+.sketch-list {
+    flex: 1;
+    padding: 10px;
+    border-right: 2px solid #ddd;
+}
+
+.sketch-details {
+    flex: 2;
+    padding: 10px;
+}

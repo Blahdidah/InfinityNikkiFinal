@@ -1,0 +1,5 @@
+<h2>Sketches</h2>
+
+<app-sketch-list (sketchSelected)="onSketchSelected($event)"></app-sketch-list>
+    
+<app-sketch-detail *ngIf="selectedSketch" [sketch]="selectedSketch"></app-sketch-detail>
