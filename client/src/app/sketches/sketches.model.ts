@@ -13,7 +13,7 @@ export interface Sketch {
     | 'backpieces' | 'rings' | 'arm decoration' | 'hand helds'
     | 'base makeup' | 'eyebrows' | 'eyelashes' | 'contact lenses'
     | 'lips' | 'skintones' | 'full makeup';
-    materials: string[];
+    materials: { material: string; quantity: number }[];
     image_url: string;
     obtained: string;
     stars: 1 | 2 | 3 | 4 | 5;

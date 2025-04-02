@@ -16,7 +16,10 @@ export class SketchesService{
             attributes: ['Shimmering', 'Ethereal', 'Graceful'],
             category: 'Clothing',
             type: 'dress',
-            materials: ['Silk Fabric', 'Moonstone'],
+            materials: [
+                { material: 'Silk Fabric', quantity: 3 }, 
+                { material: 'Moonstone', quantity: 1 }
+            ],
             image_url: 'assets/images/moonlight_gown.jpg',
             obtained: 'Gacha Event',
             stars: 5,
@@ -30,7 +33,10 @@ export class SketchesService{
             attributes: ['Flowing', 'Delicate', 'Lightweight'],
             category: 'Accessories',
             type: 'headwear',
-            materials: ['Tulle Fabric', 'Golden Thread'],
+            materials: [
+                { material: 'Tulle Fabric', quantity: 2 }, 
+                { material: 'Golden Thread', quantity: 1 }
+            ],
             image_url: 'assets/images/sunset_veil.jpg',
             obtained: 'Crafting',
             stars: 4,
@@ -44,7 +50,10 @@ export class SketchesService{
             attributes: ['Bold', 'Matte Finish', 'Long-lasting'],
             category: 'Makeup',
             type: 'lips',
-            materials: ['Red Pigment', 'Lip Gloss Base'],
+            materials: [
+                { material: 'Red Pigment', quantity: 2 }, 
+                { material: 'Lip Gloss Base', quantity: 1 }
+            ],
             image_url: 'assets/images/rosy_kiss.jpg',
             obtained: 'Boutique Shop',
             stars: 3,

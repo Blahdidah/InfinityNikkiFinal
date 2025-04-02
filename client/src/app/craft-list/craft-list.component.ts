@@ -19,7 +19,10 @@ export class CraftListComponent implements OnInit, OnDestroy{
   }
 
   ngOnInit(): void {
-    this.material = this.clService.getMaterials();
+    this.material = this.clService.getMaterials().map(m => m.material);
+    this.clService.materialsChanged.subscribe((materials) => {
+      this.material = materials.map(m => m.material);
+  });
     this.cmChangeSub = this.clService.materialsChanged
       .subscribe(
         (materials: Material[]) => {

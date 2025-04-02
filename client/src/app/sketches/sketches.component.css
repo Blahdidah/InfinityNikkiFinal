@@ -1,11 +1,15 @@
 .container {
     display: flex;
+    background-color: pink;
+    flex-flow: column
 }
 
 .sketch-list {
     flex: 1;
     padding: 10px;
     border-right: 2px solid #ddd;
+    cursor: pointer;
+
 }
 
 .sketch-details {

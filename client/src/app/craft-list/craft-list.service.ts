@@ -1,41 +1,61 @@
+import { Injectable } from "@angular/core";
 import { Material } from "../material.model";
-import { __spreadArray } from "tslib";
+import { Sketch } from "../sketches/sketches.model";
 import { Subject } from "rxjs";
 
+@Injectable({ providedIn: 'root' })
 export class CraftingListService {
-
-    materialsChanged = new Subject<Material[]>();
+    materialsChanged = new Subject<{ material: Material, quantity: number }[]>();
+    sketchesChanged = new Subject<Sketch[]>();
     startedEditing = new Subject<number>();
-    private materials: Material[] = [
-        new Material('Ambird Feather', 'Animal Grooming', ['Florawish', 'Breezy Meadow', 'Stoneville', 'Wishing Woods', 'Memorial Mountains'], 1.0),
-        new Material('Bustlefly', 'Bug Catching', ['Breezy Meadow'], 3.0),
-    ];
+
+    private sketches: Sketch[] = [];
+    private materials: { material: Material, quantity: number }[] = [];
 
     getMaterials() {
         return this.materials.slice();
     }
 
-    addMaterial(material: Material) {
-        this.materials.push(material);
-        this.materialsChanged.next(this.materials.slice());
+    getSketches() {
+        return this.sketches.slice();
     }
 
-    addMaterials(materials: Material[]) {
-        this.materials.push(...materials);
-        this.materialsChanged.next(this.materials.slice());
+    addSketch(sketch: Sketch) {
+        this.sketches.push(sketch);
+        this.updateMaterials(sketch.materials);
+        this.sketchesChanged.next(this.sketches.slice());
     }
 
-    getMaterial(index: number) {
-        return this.materials[index];
+    removeSketch(index: number) {
+        const removedSketch = this.sketches[index];
+
+        // Remove sketch from the list
+        this.sketches.splice(index, 1);
+        this.sketchesChanged.next(this.sketches.slice());
+
+        // Recalculate material quantities after removing a sketch
+        this.recalculateMaterials();
     }
 
-    updateMaterial(index: number, newMaterial: Material) {
-        this.materials[index] = newMaterial;
-        this.materialsChanged.next(this.materials.slice());
-    }
+    updateMaterials(materials: { material: string; quantity: number }[]) {
+      const updatedMaterials: { material: Material; quantity: number }[] = materials.map(m => ({
+          material: new Material(m.material, '', [], 0), // Convert string to Material object
+          quantity: m.quantity
+      }));
+  
+      this.materials.push(...updatedMaterials);
+      this.materialsChanged.next(this.materials.slice());
+  }
+  
 
-    deleteMaterial(index: number) {
-        this.materials.splice(index, 1);
+    private recalculateMaterials() {
+        this.materials = [];
+
+        // Rebuild the materials list based on the current sketches
+        this.sketches.forEach(sketch => {
+            this.updateMaterials(sketch.materials);
+        });
+
         this.materialsChanged.next(this.materials.slice());
     }
 
