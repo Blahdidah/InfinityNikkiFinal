@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MaterialsService } from './materials.service';
+import { Material } from '../material.model';
 
 @Component({
     selector: 'app-materials',
@@ -7,7 +8,7 @@ import { MaterialsService } from './materials.service';
     styleUrls: ['./materials.component.css']
 })
 export class MaterialsComponent implements OnInit {
-    materials: any[] = [];
+    materials: Material[] = [];
 
     constructor(private materialsService: MaterialsService) { }
 

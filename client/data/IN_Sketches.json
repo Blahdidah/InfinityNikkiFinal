@@ -1,0 +1,691 @@
+[
+  {
+    "name": "Vibrant Goldvines",
+    "description": "The edges of the sketch are decorated with vines, sometimes forming circles, other times stars.",
+    "styles": [
+      "Elegant"
+    ],
+    "attributes": [
+      "Formal",
+      "Retro"
+    ],
+    "category": "Clothing",
+    "type": "Hair",
+    "materials": [
+      
+      { "material":  "Glimmering Scale",
+        "quantity": 1
+      },
+      
+      { "material":  "Starlit Plum Essence",
+        "quantity": 3
+      },
+      
+      { "material":  "Foodie Bee",
+        "quantity": 3
+      },
+      
+      { "material":  "Floof Yarn",
+        "quantity": 3
+      },
+      
+      { "material":  "Bedrock Crystal: Command",
+        "quantity": 10
+      },
+      
+      { "material":  "Threads",
+        "quantity": 200
+      },
+      
+      { "material":  "Blings",
+        "quantity": 16000
+      }
+    ],
+    
+    "image_url": "/assets/sketchimg/Vibrant_Goldvines.webp",
+    "obtained": "Heart of Infinity",
+    "stars": 5,
+    "part_of_set": true,
+    "set_name": "Wishful Aurosa"
+  },
+  {
+    "name": "Aurosa Bloom",
+    "description": "Glowing, golden petals are frozen in time, ready to awaken something new like a wish come true.",
+    "styles": [
+      "Elegant"
+    ],
+    "attributes": [
+      "Formal",
+      "Retro"
+    ],
+    "category": "Clothing",
+    "type": "Dress",
+    "materials": [
+      
+        { "material":  "Golden Fruit",
+        "quantity": 1
+      },
+      
+        { "material":  "Sol Fruit",
+        "quantity": 10
+      },
+      
+        { "material":  "Glimmergrass",
+        "quantity": 10
+      },
+      
+        { "material":  "Aurosa in Bloom",
+        "quantity": 1
+      },
+      
+        { "material":  "Lampbloom",
+        "quantity": 10
+      },
+      
+        { "material":  "Bedrock Crystal: Command",
+        "quantity": 10
+      },
+      
+        { "material":  "Threads",
+        "quantity": 320
+      },
+      
+        { "material":  "Blings",
+        "quantity": 25600
+      }
+    ],
+    "image_url": "/assets/sketchimg/Aurosa_Bloom.webp",
+    "obtained": "Heart of Infinity",
+    "stars": 5,
+    "part_of_set": true,
+    "set_name": "Wishful Aurosa"
+  },
+  {
+    "name": "Aurosa Traces",
+    "description": "Roses weave golden trails, following small footsteps and extending into the distance.",
+    "styles": [
+      "Elegant"
+    ],
+    "attributes": [
+      "Formal",
+      "Retro"
+    ],
+    "category": "Clothing",
+    "Type": "Socks",
+    "materials":[
+    { 
+      "material": "Vine of Dream",
+      "quantity": 1
+      },
+    { 
+      "material": "Kerchief Fish",
+      "quantity": 5
+    },
+    { 
+      "material":  "Handkerfin",
+      "quantity": 5
+    },
+    { 
+      "material":  "Cushion Fluff",
+      "quantity": 3
+    },
+    { 
+      "material":  "Bedrock Crystal: Command",
+      "quantity": 10      
+    },
+    {
+      "material": "Threads",
+      "quantity": 96
+    },
+    {
+      "material": "Blings",
+      "quantity": 7500
+    }
+    ],
+    "image_url": "/assets/sketchimg/Aurosa_Traces.webp",
+    "obtained": "Heart of Infinity",
+    "stars": 5,
+    "part_of_set": true,
+    "set_name": "Wishful Aurosa"
+  },
+  {
+    "name": "Goldleaf Ascent",
+    "description": "The branches and leaves hear the whispers of seeds, growing toward life's vibrant call.",
+    "styles": [
+      "Elegant"
+    ],
+    "attributes": [
+      "Formal",
+      "Retro"
+    ],
+    "category": "Clothing",
+    "type": "Shoes",
+    "materials": [
+      {
+        "material": "Maskwing",
+        "quantity": 2
+      },
+      {
+        "material": "Palettetail",
+        "quantity": 3
+      },
+      {
+        "material": "Mani Beetle",
+        "quantity": 5
+      },
+      {
+        "material": "Bedrock Crystal: Command",
+        "quantity": 10
+      },
+      {
+        "material": "Threads",
+        "quantity": 96
+      },
+      {
+        "material": "Blings",
+        "quantity": 6400
+      }
+    ],
+    "image_url": "/assets/sketchimg/Goldleaf_Ascent.webp",
+    "obtained": "Heart of Infinity",
+    "stars": 5,
+    "part_of_set": true,
+    "set_name": "Wishful Aurosa"
+  },
+  {
+    "name": "Golden Diadem",
+    "description": "Sunlight blesses the roses, gifting them golden crowns and praising their floral symphony.",
+    "styles": [
+      "Elegant"
+    ],
+    "attributes": [
+      "Formal",
+      "Retro"
+    ],
+    "category": "Accessories",
+    "type": "Headwear",
+    "materials": [
+      {
+        "material": "Golden Dew",
+        "quantity": 1
+      },
+      {
+        "material": "Beretsant Feather",
+        "quantity": 5
+      },
+      {
+        "material": "Windbloom",
+        "quantity": 5
+      },
+      {
+        "material": "Pearl Wings",
+        "quantity": 3
+      },
+      {
+        "material": "Bedrock Crystal: Command",
+        "quantity": 10
+      },
+      {
+        "material": "Threads",
+        "quantity": 80
+      },
+      {
+        "material": "Blings",
+        "quantity": 6250
+      }
+    ],
+    "image_url": "/assets/sketchimg/Golden_Diadem.webp",
+    "obtained": "Heart of Infinity",
+    "stars": 5,
+    "part_of_set": true,
+    "set_name": "Wishful Aurosa"
+  },
+  {
+    "name": "Golden Butterfly",
+    "description": "Sun-kissed roses shine, attracting butterflies to dance around them.",
+    "styles": [
+      "Elegant"
+    ],
+    "attributes": [
+      "Formal",
+      "Retro"
+    ],
+    "category": "Accessories",
+    "type": "Earrings",
+    "materials": [
+      {
+        "material": "Whisker Fish",
+        "quantity": 5
+      },
+      {
+        "material": "Sizzpollen Essence",
+        "quantity": 3
+      },
+      {
+        "material": "Bunny Fluff Essence",
+        "quantity": 3
+      },
+      {
+        "material": "Bedrock Crystal: Command",
+        "quantity": 10
+      },
+      {
+        "material": "Threads",
+        "quantity": 80
+      },
+      {
+        "material": "Blings",
+        "quantity": 6250
+      }
+    ],
+    "image_url": "/assets/sketchimg/Golden_Butterfly.webp",
+    "obtained": "Heart of Infinity",
+    "stars": 5,
+    "part_of_set": true,
+    "set_name": "Wishful Aurosa"
+  },
+  {
+    "name": "Goldbud Promise",
+    "description": "A flower bud wrapped in petals makes a promise to bloom when spring arrives.",
+    "styles": [
+      "Elegant"
+    ],
+    "attributes": [
+      "Formal",
+      "Retro"
+    ],
+    "category": "Accessories",
+    "type": "Choker",
+    "materials": [
+      {
+        "material": "Scarf Worm",
+        "quantity": 5
+      },
+      {
+        "material": "Wisteriasol",
+        "quantity": 10
+      },
+      {
+        "material": "Suspender Fluff",
+        "quantity": 8
+      },
+      {
+        "material": "Bedrock Crystal: Command",
+        "quantity": 10
+      },
+      {
+        "material": "Threads",
+        "quantity": 60
+      },
+      {
+        "material": "Blings",
+        "quantity": 4000
+      }
+    ],
+    "image_url": "/assets/sketchimg/Goldbud_Promise.webp",
+    "obtained": "Heart of Infinity",
+    "stars": 5,
+    "part_of_set": true,
+    "set_name": "Wishful Aurosa"
+  },
+  {
+    "name": "Radiant Blossom",
+    "description": "When a breeze eventually opens the tender buds, pollen will dance in mid-air. At that moment, the entire sea of flowers will radiate a golden glow.",
+    "styles": [
+      "Elegant"
+    ],
+    "attributes": [
+      "Formal",
+      "Retro"
+    ],
+    "category": "Accessories",
+    "type": "Gloves",
+    "materials": [
+      {
+        "material": "Wreath Fluff",
+        "quantity": 3
+      },
+      {
+        "material": "Hooded Feather",
+        "quantity": 3
+      },
+      {
+        "material": "Cushion Fluff",
+        "quantity": 3
+      },
+      {
+        "material": "Bedrock Crystal: Command",
+        "quantity": 10
+      },
+      {
+        "material": "Threads",
+        "quantity": 100
+      },
+      {
+        "material": "Blings",
+        "quantity": 8000
+      }
+    ],
+    "image_url": "/assets/sketchimg/Radiant_Blossom.webp",
+    "obtained": "Heart of Infinity",
+    "stars": 5,
+    "part_of_set": true,
+    "set_name": "Wishful Aurosa"
+  },
+  {
+    "name": "Dreamy Starlight",
+    "description": "A swirling mist obscured the path ahead, and a faintly visible starlight seemed almost within reach. The girl searched countless times, running toward the destination of her dreams.",
+    "styles": [
+      "Sexy"
+    ],
+    "attributes": [
+      "Cute"
+    ],
+    "category": "Clothing",
+    "type": "Socks",
+    "materials": [
+      {
+        "material": "Beretsant Feather",
+        "quantity": 2
+      },
+      {
+        "material": "Cushion Fluff",
+        "quantity": 2
+      },
+      {
+        "material": "Bedrock Crystal: Plummet",
+        "quantity": 3
+      },
+      {
+        "material": "Threads",
+        "quantity": 30
+      },
+      {
+        "material": "Blings",
+        "quantity": 3000
+      }
+    ],
+    "image_url": "/assets/sketchimg/Dreamy_Starlight.webp",
+    "obtained": "Styling Challenge",
+    "stars": 3,
+    "part_of_set": false,
+    "set_name": "Searching For Dreams"
+  },
+  {
+    "Name": "Star of Dreams",
+    "description":"The starlight paved the path of dreams as the girl stepped on reflections of the starry sky, heading toward a dazzling future.",
+    "Styles": "Sexy",
+    "Attributes": "Cute",
+    "category": "Clothing",
+    "type": "Shoes",
+    "materials": [
+      {
+        "material": "Scarf Worm",
+        "quantity": 2
+      },
+      {
+        "material": "Pearl Wings",
+        "quantity": 8
+      },
+      {
+        "material": "Bedrock Crystal: Plummet",
+        "quantity": 3
+      },
+      {
+        "material": "Threads",
+        "quantity": 40
+      },
+      {
+        "material": "Blings",
+        "quantity": 4000
+      }
+    ],
+    "image_url": "/assets/sketchimg/Star_of_Dreams.webp",
+    "obtained": "Styling Challenge",
+    "stars": 3,
+    "part_of_set": true,
+    "set_name": "Searching For Dreams"
+  },
+  {
+    "name": "Fallen Star",
+    "description": "Silent stars fell from the sky, their final brilliance imprinted in the girl's eyes, igniting the first torch.",
+    "styles": [
+      "Sexy"
+    ],
+    "attributes": [
+      "Cute"
+    ],
+    "category": "Accessories",
+    "type": "Neckware",
+    "materials": [
+      {
+        "material": "Lamp Fish",
+        "quantity": 6
+      },
+      {
+        "material": "Handkerfin",
+        "quantity": 6
+      },
+      {
+        "material": "Bedrock Crystal: Plummet",
+        "quantity": 5
+      },
+      {
+        "material": "Threads",
+        "quantity": 25
+      },
+      {
+        "material": "Blings",
+        "quantity": 1000
+      }
+    ],
+    "image_url": "/assets/sketchimg/Fallen_Star.webp",
+    "obtained": "Styling Challenge",
+    "stars": 3,
+    "part_of_set": false,
+    "set_name": "Searching For Dreams"
+  },
+  {
+    "name": "Tomorrow's Vows",
+    "description": "Despite being Florawish's youngest mayor, Lilina is trusted by all the townsfolk.",
+    "styles": [
+      "Sweet"
+    ],
+    "attributes": [
+      "Retro"
+    ],
+    "category": "Clothing",
+    "type": "Hair",
+    "materials": [
+      {
+        "material": "Chimecada Essence",
+        "quantity": 3
+      },
+      {
+        "material": "Whisker Fish Essence",
+        "quantity": 2
+      },
+      {
+        "material": "Quillfin Essence",
+        "quantity": 3
+      },
+      {
+        "material": "Bedrock Crystal: Tumble",
+        "quantity": 10
+      },
+      {
+        "material": "Threads",
+        "quantity": 156
+      },
+      {
+        "material": "Blings",
+        "quantity": 12500
+      }
+    ],
+    "image_url": "/assets/sketchimg/Tomorrows_Vows.webp",
+    "obtained": "Kilo",
+    "stars": 4,
+    "part_of_set": false,
+    "set_name": "Rebirth Wish"
+  },
+  {
+    "name": "Bright Tomorrow",
+    "description": "Lilina lights the way in the ruins, her guidance causing more and more people to join her.",
+    "styles": [
+      "Sweet"
+    ],
+    "attributes": [
+      "Retro"
+    ],
+    "category": "Clothing",
+    "type": "Shoes",
+    "materials": [
+      {
+        "material": "Aromalily Essence",
+        "quantity": 3
+      },
+      {
+        "material": "Florapom Essence",
+        "quantity": 3
+      },
+      {
+        "material": "Blossom Beetle",
+        "quantity": 3
+      },
+      {
+        "material": "Bedrock Crystal: Tumble",
+        "quantity": 10
+      },
+      {
+        "material": "Threads",
+        "quantity": 125
+      },
+      {
+        "material": "Blings",
+        "quantity": 10000
+      }
+    ],
+    "image_url": "/assets/sketchimg/Bright_Tomorrow.webp",
+    "obtained": "Kilo",
+    "stars": 4,
+    "part_of_set": false,
+    "set_name": "Rebirth Wish"
+  },
+  {
+      "name": "Heartfelt Tribute",
+      "description": "These brown leather shoes may look simple and understated, but their materials and craftsmanship are top-notch.",
+      "styles": [
+        "Elegant"
+      ],
+      "attributes": [
+        "Retro"
+      ],
+      "category": "Clothing",
+      "type": "Shoes",
+      "materials": [
+        {
+          "material": "Florapom",
+          "quantity": 2
+        },
+        {
+          "material": "Blossom Beetle Essence",
+          "quantity": 2
+        },
+        {
+          "material": "Bedrock Crystal: Command",
+          "quantity": 2
+        },
+        {
+          "material": "Threads",
+          "quantity": 20
+        },
+        {
+          "material": "Blings",
+          "quantity": 1600
+        }
+      ],
+      "image_url": "/assets/sketchimg/Heartfelt_Tribute.webp",
+      "obtained": "Styling Challenge",
+      "stars": 3,
+      "part_of_set": false,
+      "set_name": "A Beautiful Day"
+  },
+  {
+    "name": "Song of Harvest",
+    "description": "To this day, the song of the Harvest Cup Festival lingers in the air of Stoneville. Each time the gentle tune plays, people pause their work to listen, paying homage to their ancestors.",
+    "styles": [
+      "Fresh"
+    ],
+    "attributes": [
+      "Pastoral"
+    ],
+    "category": "Clothing",
+    "type": "Dresses",
+    "materials": [
+      {
+        "material": "Quillfin",
+        "quantity": 5
+      },
+      {
+        "material": "Handkerfin",
+        "quantity": 3
+      },
+      {
+        "material": "Bedrock Crystal: Hurl",
+        "quantity": 20
+      },
+      {
+        "material": "Threads",
+        "quantity": 96
+      },
+      {
+        "material": "Blings",
+        "quantity": 8000
+      }
+    ],
+    "image_url": "/assets/sketchimg/Song_of_Harvest.webp",
+    "obtained": "Kilo",
+    "stars": 4,
+    "part_of_set": false,
+    "set_name": "Hometown Breeze"
+  },
+  {
+    "name": "Breezy Cotton",
+    "description": "Soft, gentle cotton socks, suitable for working in the fields. Their affordable price makes them popular among the villagers of Stoneville.",
+    "styles": [
+      "Fresh"
+    ],
+    "attributes": [
+      "Pastoral"
+    ],
+    "category": "Clothing",
+    "type": "Socks",
+    "materials": [
+      {
+        "material": "Suspenders Fluff",
+        "quantity": 3
+      },
+      {
+        "material": "Longstocking Wool Essence",
+        "quantity": 6
+      },
+      {
+        "material": "Bedrock Crystal: Hurl",
+        "quantity": 10
+      },
+      {
+        "material": "Threads",
+        "quantity": 36
+      },
+      {
+        "material": "Blings",
+        "quantity": 3000
+      }
+    ],
+    "image_url": "/assets/sketchimg/Breezy_Cotton.webp",
+    "obtained": "Kilo",
+    "stars": 4,
+    "part_of_set": false,
+    "set_name": "Hometown Breeze"
+  }
+]

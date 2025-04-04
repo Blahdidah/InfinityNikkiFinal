@@ -1,0 +1,914 @@
+[
+  {
+    "name": "Aromalily",
+    "type": "Collection",
+    "source": ["Florawish", "Breezy Meadow", "Stoneville", "Abandoned District", "Wishing Woods"],
+    "rarity": 3.0
+  },
+  {
+    "name": "Aromalily Essence",
+    "type": "Collection",
+    "source": ["Florawish", "Breezy Meadow", "Stoneville", "Abandoned District", "Wishing Woods"],
+    "rarity": 3.0
+  },
+  {
+    "name": "Buttencone",
+    "type": "Collection",
+    "source": ["Florawish", "Breezy Meadow", "Stoneville", "Abandoned District", "Wishing Woods", "Memorial Mountains"],
+    "rarity": 1.0
+  },
+  {
+    "name": "Daisy",
+    "type": "Collection",
+    "source": ["Florawish", "Breezy Meadow", "Stoneville", "Abandoned District", "Wishing Woods", "Memorial Mountains"],
+    "rarity": 1.0
+  },
+  {
+    "name": "Flight Fruit",
+    "type": "Collection",
+    "source": ["Stonewoods"],
+    "rarity": 2.0
+  },
+  {
+    "name": "Flight Fruit Essence",
+    "type": "Collection",
+    "source": ["Stonewoods"],
+    "rarity": 2.0
+  },
+  {
+    "name": "Blastpollen",
+    "type": "Collection",
+    "source": ["Firework Isles"],
+    "rarity": 2.0
+  },
+  {
+    "name": "Florapom",
+    "type": "Collection",
+    "source": ["Florawish", "Breezy Meadow", "Memorial Mountains"],
+    "rarity": 3.0
+  },
+  {
+    "name": "Florapom Essence",
+    "type": "Collection",
+    "source": ["Florawish", "Breezy Meadow", "Memorial Mountains"],
+    "rarity": 3.0
+  },
+  {
+    "name": "Glimmergrass",
+    "type": "Collection",
+    "source": ["Wishing Woods"],
+    "rarity": 3.0
+  },
+  {
+    "name": "Glimmergrass Essence",
+    "type": "Collection",
+    "source": ["Wishing Woods"],
+    "rarity": 3.0
+  },
+  {
+    "name": "Grasspom",
+    "type": "Collection",
+    "source": ["Florawish", "Breezy Meadow", "Memorial Mountains"],
+    "rarity": 2.0
+  },
+  {
+    "name": "Grasspom Essence",
+    "type": "Collection",
+    "source": ["Florawish", "Breezy Meadow", "Memorial Mountains"],
+    "rarity": 2.0
+  },
+  {
+    "name": "Hare Powder",
+    "type": "Collection",
+    "source": ["Florawish", "Breezy Meadow", "Stoneville", "Abandoned District", "Wishing Woods", "Memorial Mountains"],
+    "rarity": 2.0
+  },
+  {
+    "name": "Hare Powder Essence",
+    "type": "Collection",
+    "source": ["Florawish", "Breezy Meadow", "Stoneville", "Abandoned District", "Wishing Woods", "Memorial Mountains"],
+    "rarity": 2.0
+  },
+  {
+    "name": "Lampbloom",
+    "type": "Collection",
+    "source": ["Florawish", "Breezy Meadow", "Stoneville", "Abandoned District", "Wishing Woods"],
+    "rarity": 1.0
+  },
+  {
+    "name": "Lampchili",
+    "type": "Collection",
+    "source": ["Florawish", "Breezy Meadow", "Stoneville", "Abandoned District", "Wishing Woods"],
+    "rarity": 1.0
+  },
+  {
+    "name": "Pearly Shell",
+    "type": "Collection",
+    "source": ["Florawish", "Breezy Meadow", "Stoneville", "Abandoned District", "Wishing Woods"],
+    "rarity": 1.0
+  },
+  {
+    "name": "Rainy Orchid",
+    "type": "Collection",
+    "source": ["Florawish", "Breezy Meadow", "Memorial Mountains"],
+    "rarity": 3.0
+  },
+  {
+    "name": "Rainy Orchid Essence",
+    "type": "Collection",
+    "source": ["Florawish", "Breezy Meadow", "Memorial Mountains"],
+    "rarity": 3.0
+  },
+  {
+    "name": "Seed Pearl",
+    "type": "Collection",
+    "source": ["Florawish", "Breezy Meadow", "Stoneville", "Abandoned District", "Wishing Woods"],
+    "rarity": 2.0
+  },
+  {
+    "name": "Seed Pearl Essence",
+    "type": "Collection",
+    "source": ["Florawish", "Breezy Meadow", "Stoneville", "Abandoned District", "Wishing Woods"],
+    "rarity": 2.0
+  },
+  {
+    "name": "Sizzpollen",
+    "type": "Collection",
+    "source": ["Florawish", "Breezy Meadow", "Stoneville", "Abandoned District", "Wishing Woods"],
+    "rarity": 2.0
+  },
+  {
+    "name": "Sizzpollen Essence",
+    "type": "Collection",
+    "source": ["Florawish", "Breezy Meadow", "Stoneville", "Abandoned District", "Wishing Woods"],
+    "rarity": 2.0
+  },
+  {
+    "name": "Sol Fruit",
+    "type": "Collection",
+    "source": ["Wishing Woods"],
+    "rarity": 4.0
+  },
+  {
+    "name": "Starlight Scallop",
+    "type": "Collection",
+    "source": ["Florawish", "Breezy Meadow", "Stoneville", "Abandoned District", "Wishing Woods"],
+    "rarity": 1.0
+  },
+  {
+    "name": "Starlit Plum",
+    "type": "Collection",
+    "source": ["Florawish", "Breezy Meadow", "Stoneville", "Abandoned District", "Wishing Woods"],
+    "rarity": 2.0
+  },
+  {
+    "name": "Starlit Plum Essence",
+    "type": "Collection",
+    "source": ["Florawish", "Breezy Meadow", "Stoneville", "Abandoned District", "Wishing Woods"],
+    "rarity": 2.0
+  },
+  {
+    "name": "Stellar Fruit",
+    "type": "Collection",
+    "source": ["Wishing Woods"],
+    "rarity": 4.0
+  },
+  {
+    "name": "Sunny Orchid",
+    "type": "Collection",
+    "source": ["Florawish", "Breezy Meadow", "Memorial Mountains"],
+    "rarity": 3.0
+  },
+  {
+    "name": "Sunny Orchid Essence",
+    "type": "Collection",
+    "source": ["Florawish", "Breezy Meadow", "Memorial Mountains"],
+    "rarity": 3.0
+  },
+  {
+    "name": "Windbloom",
+    "type": "Collection",
+    "source": ["Stonewoods"],
+    "rarity": 2.0
+  },
+  {
+    "name": "Windbloom Essence",
+    "type": "Collection",
+    "source": ["Stonewoods"],
+    "rarity": 2.0
+  },
+  {
+    "name": "Wisteriasol",
+    "type": "Collection",
+    "source": ["Stoneville", "Abandonded District"],
+    "rarity": 3.0
+  },
+  {
+    "name": "Wisteriasol Essence",
+    "type": "Collection",
+    "source": ["Stoneville", "Abandonded District"],
+    "rarity": 3.0
+  },
+  {
+    "name": "Woolfruit",
+    "type": "Collection",
+    "source": ["Florawish", "Breezy Meadow", "Stoneville", "Wishing Woods", "Memorial Mountains"],
+    "rarity": 1.0
+  },
+  {
+    "name": "Ambird Feather",
+    "type": "Animal Grooming",
+    "source": ["Florawish", "Breezy Meadow", "Stoneville", "Wishing Woods", "Memorial Mountains"],
+    "rarity": 1.0
+  },
+  {
+    "name": "Astral Feather",
+    "type": "Animal Grooming",
+    "source": ["Abandoned District"],
+    "rarity": 4.0
+  },
+  {
+    "name": "Astral Feather Essence",
+    "type": "Animal Grooming",
+    "source": ["Abandoned District"],
+    "rarity": 4.0
+  },
+  {
+    "name": "Beretsant Feather",
+    "type": "Animal Grooming",
+    "source": ["Stoneville", "Abandonded District"],
+    "rarity": 2.0
+  },
+  {
+    "name": "Beretsant Feather Essence",
+    "type": "Animal Grooming",
+    "source": ["Stoneville", "Abandonded District"],
+    "rarity": 2.0
+  },
+  {
+    "name": "Bibcoon Furball",
+    "type": "Animal Grooming",
+    "source": ["Florawish"],
+    "rarity": 3.0
+  },
+  {
+    "name": "Bibcoon Furball Essence",
+    "type": "Animal Grooming",
+    "source": ["Florawish"],
+    "rarity": 3.0
+  },
+  {
+    "name": "Bowler Fluff",
+    "type": "Animal Grooming",
+    "source": ["Stoneville"],
+    "rarity": 2.0
+  },
+  {
+    "name": "Bowler Fluff Essence",
+    "type": "Animal Grooming",
+    "source": ["Stoneville"],
+    "rarity": 2.0
+  },
+  {
+    "name": "Bowtie Fluff",
+    "type": "Animal Grooming",
+    "source": ["Florawish", "Stoneville", "Abandoned District"],
+    "rarity": 1.0
+  },
+  {
+    "name": "Bullquet Felt",
+    "type": "Animal Grooming",
+    "source": ["Breezy Meadow"],
+    "rarity": 4.0
+  },
+  {
+    "name": "Bullquet Felt Essence",
+    "type": "Animal Grooming",
+    "source": ["Breezy Meadow"],
+    "rarity": 4.0
+  },
+  {
+    "name": "Bunny Fluff",
+    "type": "Animal Grooming",
+    "source": ["Florawish", "Breezy Meadow", "Stoneville", "Abandoned District", "Wishing Woods", "Memorial Mountains"],
+    "rarity": 2.0
+  },
+  {
+    "name": "Bunny Fluff Essence",
+    "type": "Animal Grooming",
+    "source": ["Florawish", "Breezy Meadow", "Stoneville", "Abandoned District", "Wishing Woods", "Memorial Mountains"],
+    "rarity": 2.0
+  },
+  {
+    "name": "Celebcrow Feather",
+    "type": "Animal Grooming",
+    "source": ["Florawish", "Breezy Meadow", "Stoneville", "Abandoned District", "Wishing Woods"],
+    "rarity": 1.0
+  },
+  {
+    "name": "Crown Fluff",
+    "type": "Animal Grooming",
+    "source": ["Wishing Woods"],
+    "rarity": 3.0
+  },
+  {
+    "name": "Crown Fluff Essence",
+    "type": "Animal Grooming",
+    "source": ["Wishing Woods"],
+    "rarity": 3.0
+  },
+  {
+    "name": "Crowned Feather",
+    "type": "Animal Grooming",
+    "source": ["Wishing Woods"],
+    "rarity": 2.0
+  },
+  {
+    "name": "Crowned Feather Essence",
+    "type": "Animal Grooming",
+    "source": ["Wishing Woods"],
+    "rarity": 2.0
+  },
+  {
+    "name": "Cushion Fluff",
+    "type": "Animal Grooming",
+    "source": ["Florawish", "Stoneville", "Abandonded District", "Wishing Woods"],
+    "rarity": 1.0
+  },
+  {
+    "name": "Dawn Fluff",
+    "type": "Animal Grooming",
+    "source": ["Wishing Woods"],
+    "rarity": 4.0
+  },
+  {
+    "name": "Dawn Fluff Essence",
+    "type": "Animal Grooming",
+    "source": ["Wishing Woods"],
+    "rarity": 4.0
+  },
+  {
+    "name": "Floof Yarn",
+    "type": "Animal Grooming",
+    "source": ["Abandoned District", "Breezy Meadow", "Florawish", "Stoneville"],
+    "rarity": 1.0
+  },
+  {
+    "name": "Floral Fleece",
+    "type": "Animal Grooming",
+    "source": ["Stoneville", "Abandonded District"],
+    "rarity": 3.0
+  },
+  {
+    "name": "Floral Fleece Essence",
+    "type": "Animal Grooming",
+    "source": ["Stoneville", "Abandonded District"],
+    "rarity": 3.0
+  },
+  {
+    "name": "Florascent Wool",
+    "type": "Animal Grooming",
+    "source": ["Florawish", "Breezy Meadow", "Stoneville", "Abandoned District"],
+    "rarity": 1.0
+  },
+  {
+    "name": "Hooded Feather",
+    "type": "Animal Grooming",
+    "source": ["Wishing Woods"],
+    "rarity": 2.0
+  },
+  {
+    "name": "Hooded Feather Essence",
+    "type": "Animal Grooming",
+    "source": ["Wishing Woods"],
+    "rarity": 2.0
+  },
+  {
+    "name": "Longstocking Wool",
+    "type": "Animal Grooming",
+    "source": ["Breezy Meadow", "Abandonded District", "Wishing Woods"],
+    "rarity": 3.0
+  },
+  {
+    "name": "Longstocking Wool Essence",
+    "type": "Animal Grooming",
+    "source": ["Breezy Meadow", "Abandonded District", "Wishing Woods"],
+    "rarity": 3.0
+  },
+  {
+    "name": "Night Velvet",
+    "type": "Animal Grooming",
+    "source": ["Breezy Meadow"],
+    "rarity": 3.0
+  },
+  {
+    "name": "Night Velvet Essence",
+    "type": "Animal Grooming",
+    "source": ["Breezy Meadow"],
+    "rarity": 3.0
+  },
+  {
+    "name": "Pony Curls",
+    "type": "Animal Grooming",
+    "source": ["Breezy Meadow"],
+    "rarity": 3.0
+  },
+  {
+    "name": "Pony Curls Essence",
+    "type": "Animal Grooming",
+    "source": ["Breezy Meadow"],
+    "rarity": 3.0
+  },
+  {
+    "name": "Rose Velvet",
+    "type": "Animal Grooming",
+    "source": ["Breezy Meadow"],
+    "rarity": 3.0
+  },
+  {
+    "name": "Rose Velvet Essence",
+    "type": "Animal Grooming",
+    "source": ["Breezy Meadow"],
+    "rarity": 3.0
+  },
+  {
+    "name": "Shirtcat Fluff",
+    "type": "Animal Grooming",
+    "source": ["Florawish", "Breezy Meadow", "Stoneville", "Abandoned District", "Wishing Woods"],
+    "rarity": 1.0
+  },
+  {
+    "name": "Stallion Locks",
+    "type": "Animal Grooming",
+    "source": ["Breezy Meadow", "Wishing Woods"],
+    "rarity": 1.0
+  },
+  {
+    "name": "Suspenders Fluff",
+    "type": "Animal Grooming",
+    "source": ["Stoneville", "Abandonded District"],
+    "rarity": 3.0
+  },
+  {
+    "name": "Suspenders Fluff Essence",
+    "type": "Animal Grooming",
+    "source": ["Stoneville", "Abandonded District"],
+    "rarity": 3.0
+  },
+  {
+    "name": "Wreath Fluff",
+    "type": "Animal Grooming",
+    "source": ["Wishing Woods"],
+    "rarity": 2.0
+  },
+  {
+    "name": "Wreath Fluff Essence",
+    "type": "Animal Grooming",
+    "source": ["Wishing Woods"],
+    "rarity": 2.0
+  },
+  {
+    "name": "Balletfly",
+    "type": "Bug Catching",
+    "source": ["Florawish", "Breezy Meadow", "Stoneville", "Abandoned District", "Wishing Woods"],
+    "rarity": 1.0
+  },
+  {
+    "name": "Blossom Beetle",
+    "type": "Bug Catching",
+    "source": ["Breezy Meadow"],
+    "rarity": 2.0
+  },
+  {
+    "name": "Blossom Beetle Essence",
+    "type": "Bug Catching",
+    "source": ["Breezy Meadow"],
+    "rarity": 2.0
+  },
+  {
+    "name": "Bustlefly",
+    "type": "Bug Catching",
+    "source": ["Breezy Meadow"],
+    "rarity": 3.0
+  },
+  {
+    "name": "Bustlefly Essence",
+    "type": "Bug Catching",
+    "source": ["Breezy Meadow"],
+    "rarity": 3.0
+  },
+  {
+    "name": "Chimecada",
+    "type": "Bug Catching",
+    "source": ["Florawish", "Breezy Meadow"],
+    "rarity": 2.0
+  },
+  {
+    "name": "Chimecada Essence",
+    "type": "Bug Catching",
+    "source": ["Florawish", "Breezy Meadow"],
+    "rarity": 2.0
+  },
+  {
+    "name": "Foodie Bee",
+    "type": "Bug Catching",
+    "source": ["Florawish", "Breezy Meadow", "Stoneville", "Abandoned District", "Wishing Woods"],
+    "rarity": 1.0
+  },
+  {
+    "name": "Glimmerdrop",
+    "type": "Bug Catching",
+    "source": ["Florawish", "Breezy Meadow", "Stoneville", "Abandoned District", "Wishing Woods"],
+    "rarity": 1.0
+  },
+  {
+    "name": "Gogglebug",
+    "type": "Bug Catching",
+    "source": ["Florawish", "Breezy Meadow", "Stoneville", "Abandoned District", "Wishing Woods"],
+    "rarity": 1.0
+  },
+  {
+    "name": "Knitmoth",
+    "type": "Bug Catching",
+    "source": ["Florawish", "Breezy Meadow", "Stoneville", "Abandoned District", "Wishing Woods"],
+    "rarity": 1.0
+  },
+  {
+    "name": "Mani Beetle",
+    "type": "Bug Catching",
+    "source": ["Wishing Woods"],
+    "rarity": 2.0
+  },
+  {
+    "name": "Mani Beetle Essence",
+    "type": "Bug Catching",
+    "source": ["Wishing Woods"],
+    "rarity": 2.0
+  },
+  {
+    "name": "Maskwing",
+    "type": "Bug Catching",
+    "source": ["Wishing Woods"],
+    "rarity": 3.0
+  },
+  {
+    "name": "Maskwing Essence",
+    "type": "Bug Catching",
+    "source": ["Wishing Woods"],
+    "rarity": 3.0
+  },
+  {
+    "name": "Pearl Wings",
+    "type": "Bug Catching",
+    "source": ["Florawish", "Breezy Meadow", "Stoneville", "Abandoned District", "Wishing Woods", "Memorial Mountains"],
+    "rarity": 1.0
+  },
+  {
+    "name": "Pin Hopper",
+    "type": "Bug Catching",
+    "source": ["Florawish", "Breezy Meadow", "Stoneville", "Abandoned District", "Wishing Woods", "Memorial Mountains"],
+    "rarity": 1.0
+  },
+  {
+    "name": "Scarf Worm",
+    "type": "Bug Catching",
+    "source": ["Stoneville", "Abandonded District"],
+    "rarity": 3.0
+  },
+  {
+    "name": "Scarf Worm Essence",
+    "type": "Bug Catching",
+    "source": ["Stoneville", "Abandonded District"],
+    "rarity": 3.0
+  },
+  {
+    "name": "Scarfmoth",
+    "type": "Bug Catching",
+    "source": ["Stoneville", "Abandonded District"],
+    "rarity": 3.0
+  },
+  {
+    "name": "Scarfmoth Essence",
+    "type": "Bug Catching",
+    "source": ["Stoneville", "Abandonded District"],
+    "rarity": 3.0
+  },
+  {
+    "name": "Socko",
+    "type": "Bug Catching",
+    "source": ["Florawish", "Breezy Meadow"],
+    "rarity": 4.0
+  },
+  {
+    "name": "Socko Essence",
+    "type": "Bug Catching",
+    "source": ["Florawish", "Breezy Meadow"],
+    "rarity": 4.0
+  },
+  {
+    "name": "Weavespider",
+    "type": "Bug Catching",
+    "source": ["Florawish", "Breezy Meadow", "Stoneville", "Abandoned District", "Wishing Woods"],
+    "rarity": 1.0
+  },
+  {
+    "name": "Wiztle",
+    "type": "Bug Catching",
+    "source": ["Florawish", "Breezy Meadow", "Stoneville", "Abandoned District", "Wishing Woods"],
+    "rarity": 2.0
+  },
+  {
+    "name": "Wiztle Essence",
+    "type": "Bug Catching",
+    "source": ["Florawish", "Breezy Meadow", "Stoneville", "Abandoned District", "Wishing Woods"],
+    "rarity": 2.0
+  },
+  {
+    "name": "Bow Fish",
+    "type": "Fishing",
+    "source": ["Florawish", "Breezy Meadow", "Stoneville", "Abandoned District", "Wishing Woods", "Memorial Mountains"],
+    "rarity": 1.0
+  },
+  {
+    "name": "Brusher",
+    "type": "Fishing",
+    "source": ["Florawish", "Breezy Meadow", "Stoneville", "Abandoned District", "Wishing Woods"],
+    "rarity": 1.0
+  },
+  {
+    "name": "Brushie",
+    "type": "Fishing",
+    "source": ["Florawish", "Breezy Meadow", "Stoneville", "Abandoned District", "Wishing Woods"],
+    "rarity": 1.0
+  },
+  {
+    "name": "Carryfin",
+    "type": "Fishing",
+    "source": ["Florawish"],
+    "rarity": 3.0
+  },
+  {
+    "name": "Carryfin Essence",
+    "type": "Fishing",
+    "source": ["Florawish"],
+    "rarity": 3.0
+  },
+  {
+    "name": "Combelly",
+    "type": "Fishing",
+    "source": ["Wishing Woods"],
+    "rarity": 2.0
+  },
+  {
+    "name": "Combelly Essence",
+    "type": "Fishing",
+    "source": ["Wishing Woods"],
+    "rarity": 2.0
+  },
+  {
+    "name": "Handkerfin",
+    "type": "Fishing",
+    "source": ["Stoneville", "Abandoned District"],
+    "rarity": 2.0
+  },
+  {
+    "name": "Handkerfin Essence",
+    "type": "Fishing",
+    "source": ["Stoneville", "Abandoned District"],
+    "rarity": 2.0
+  },
+  {
+    "name": "Harpin Loach",
+    "type": "Fishing",
+    "source": ["Florawish", "Wishing Woods"],
+    "rarity": 1.0
+  },
+  {
+    "name": "Kerchief Fish",
+    "type": "Fishing",
+    "source": ["Stoneville", "Abandonded District"],
+    "rarity": 3.0
+  },
+  {
+    "name": "Kerchief Fish Essence",
+    "type": "Fishing",
+    "source": ["Stoneville", "Abandonded District"],
+    "rarity": 3.0
+  },
+  {
+    "name": "Lamp Fish",
+    "type": "Fishing",
+    "source": ["Florawish", "Wishing Woods"],
+    "rarity": 3.0
+  },
+  {
+    "name": "Lamp Fish Essence",
+    "type": "Fishing",
+    "source": ["Florawish", "Wishing Woods"],
+    "rarity": 3.0
+  },
+  {
+    "name": "Palettetail",
+    "type": "Fishing",
+    "source": ["Wishing Woods"],
+    "rarity": 3.0
+  },
+  {
+    "name": "Palettetail Essence",
+    "type": "Fishing",
+    "source": ["Wishing Woods"],
+    "rarity": 3.0
+  },
+  {
+    "name": "Quillfin",
+    "type": "Fishing",
+    "source": ["Florawish", "Breezy Meadow", "Stoneville", "Abandoned District", "Wishing Woods"],
+    "rarity": 2.0
+  },
+  {
+    "name": "Quillfin Essence",
+    "type": "Fishing",
+    "source": ["Florawish", "Breezy Meadow", "Stoneville", "Abandoned District", "Wishing Woods"],
+    "rarity": 2.0
+  },
+  {
+    "name": "Ribbon Eel",
+    "type": "Fishing",
+    "source": ["Breezy Meadow"],
+    "rarity": 3.0
+  },
+  {
+    "name": "Ribbon Eel Essence",
+    "type": "Fishing",
+    "source": ["Breezy Meadow"],
+    "rarity": 3.0
+  },
+  {
+    "name": "Ruffin",
+    "type": "Fishing",
+    "source": ["Florawish", "Breezy Meadow", "Stoneville"],
+    "rarity": 3.0
+  },
+  {
+    "name": "Ruffin Essence",
+    "type": "Fishing",
+    "source": ["Florawish", "Breezy Meadow", "Stoneville"],
+    "rarity": 3.0
+  },
+  {
+    "name": "Toque Fish",
+    "type": "Fishing",
+    "source": ["Florawish"],
+    "rarity": 2.0
+  },
+  {
+    "name": "Toque Fish Essence",
+    "type": "Fishing",
+    "source": ["Florawish"],
+    "rarity": 2.0
+  },
+  {
+    "name": "Tuletail",
+    "type": "Fishing",
+    "source": ["Abandonded District"],
+    "rarity": 4.0
+  },
+  {
+    "name": "Tuletail Essence",
+    "type": "Fishing",
+    "source": ["Abandonded District"],
+    "rarity": 4.0
+  },
+  {
+    "name": "Whisker Fish",
+    "type": "Fishing",
+    "source": ["Breezy Meadow"],
+    "rarity": 2.0
+  },
+  {
+    "name": "Whisker Fish Essence",
+    "type": "Fishing",
+    "source": ["Breezy Meadow"],
+    "rarity": 2.0
+  },
+  {
+    "name": "Avoidance Button",
+    "type": "Combat",
+    "source": ["Lonely Sack"],
+    "rarity": 2.0
+  },
+  {
+    "name": "Bedrock Crystal: Command",
+    "type": "Combat",
+    "source": ["Phantom Trial: Bouldy (Command)"],
+    "rarity": 3.0
+  },
+  {
+    "name": "Bedrock Crystal: Energy",
+    "type": "Combat",
+    "source": ["Phantom Trial: Bouldy (Energy)"],
+    "rarity": 3.0
+  },
+  {
+    "name": "Bedrock Crystal: Hurl",
+    "type": "Combat",
+    "source": ["Phantom Trial: Bouldy (Hurl)"],
+    "rarity": 3.0
+  },
+  {
+    "name": "Bedrock Crystal: Plummet",
+    "type": "Combat",
+    "source": ["Phantom Trial: Bouldy (Plummet)"],
+    "rarity": 3.0
+  },
+  {
+    "name": "Bedrock Crystal: Tumble",
+    "type": "Combat",
+    "source": ["Phantom Trial: Bouldy (Tumble)"],
+    "rarity": 3.0
+  },
+  {
+    "name": "Bitey Fabric",
+    "type": "Combat",
+    "source": ["Bitey Bag"],
+    "rarity": 2.0
+  },
+  {
+    "name": "Brokenheart Patch",
+    "type": "Combat",
+    "source": ["Sad Sack"],
+    "rarity": 2.0
+  },
+  {
+    "name": "Furious Ribbon",
+    "type": "Combat",
+    "source": ["Raging Sack"],
+    "rarity": 2.0
+  },
+  {
+    "name": "Grudging Cloth",
+    "type": "Combat",
+    "source": ["Grudge Bag"],
+    "rarity": 3.0
+  },
+  {
+    "name": "Hard Scrap",
+    "type": "Combat",
+    "source": ["Hard Sack"],
+    "rarity": 2.0
+  },
+  {
+    "name": "Hollow Knot",
+    "type": "Combat",
+    "source": ["Jelly Pouch"],
+    "rarity": 2.0
+  },
+  {
+    "name": "Radical Leather",
+    "type": "Combat",
+    "source": ["Radical Octopack"],
+    "rarity": 2.0
+  },
+  {
+    "name": "Reckless Iron Buckle",
+    "type": "Combat",
+    "source": ["Trap Shark"],
+    "rarity": 2.0
+  },
+  {
+    "name": "Stern Belt",
+    "type": "Combat",
+    "source": ["Harsh Sssack"],
+    "rarity": 2.0
+  },
+  {
+    "name": "Struggled Patch",
+    "type": "Combat",
+    "source": ["Sankious"],
+    "rarity": 2.0
+  },
+  {
+    "name": "Tangled Ribbon",
+    "type": "Combat",
+    "source": ["Sssack"],
+    "rarity": 2.0
+  },
+  {
+    "name": "Tough Leather",
+    "type": "Combat",
+    "source": ["Tough Octopack"],
+    "rarity": 2.0
+  },
+  {
+    "name": "Tricky Patch",
+    "type": "Combat",
+    "source": ["Spear Sack"],
+    "rarity": 2.0
+  },
+  {
+    "name": "Wings Fabric",
+    "type": "Combat",
+    "source": ["Trick-o-Bag"],
+    "rarity": 2.0
+  }
+]

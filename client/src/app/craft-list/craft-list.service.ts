@@ -64,7 +64,7 @@ export class CraftingListService {
                 this.materialsMap[materialName] = {
                     material: {
                         name: materialName,
-                        sourceType: 'default',  // You can adjust these default values as needed
+                        type: 'default',  // You can adjust these default values as needed
                         sources: [],
                         rarity: 1
                     },
