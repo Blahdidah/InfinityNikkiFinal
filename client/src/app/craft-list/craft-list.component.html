@@ -1,1 +1,24 @@
-<p>craft-list works!</p>
+<div class="crafting-list">
+    <h2>Crafting List</h2>
+
+    <div class="list-container">
+        <div class="materials">
+            <h3>Materials Needed</h3>
+            <ul>
+                <li *ngFor="let material of materials">
+                    {{ material.material.name }}: {{ material.quantity }}
+                </li>
+            </ul>
+        </div>
+
+        <div class="sketches">
+            <h3>Sketches Added</h3>
+            <ul>
+                <li *ngFor="let sketch of craftingList; let i = index">
+                    {{ sketch.name }}
+                    <button (click)="removeSketch(i)">Remove</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

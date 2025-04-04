@@ -6,6 +6,8 @@ import { CraftListComponent } from './craft-list/craft-list.component';
 import { SketchDetailComponent } from './sketches/sketch-detail/sketch-detail.component';
 import { SketchEditComponent } from './sketches/sketch-edit/sketch-edit.component';
 import { SketchResolverService } from './sketches/sketches-resolver.service';
+import { MaterialsComponent } from './materials/materials.component';
+
 
 
 const routes: Routes = [
@@ -18,7 +20,8 @@ const routes: Routes = [
       { path: ':id/edit', component: SketchEditComponent, resolve: [SketchResolverService] },
     ]
   },
-  {path: 'craft-list', component: CraftListComponent}
+  { path: 'craft-list', component: CraftListComponent },
+  { path: 'materials', component: MaterialsComponent}
 ];
 
 @NgModule({

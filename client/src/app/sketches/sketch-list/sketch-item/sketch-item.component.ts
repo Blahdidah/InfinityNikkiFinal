@@ -7,19 +7,17 @@ import { CraftingListService } from "src/app/craft-list/craft-list.service";
     templateUrl: './sketch-item.component.html',
     styleUrls: ['./sketch-item.component.css']
 })
-
-export class SketchItemComponent{
+export class SketchItemComponent {
     @Input() sketch!: Sketch;
     @Input() index!: number;
-    
-    constructor(private craftingListService: CraftingListService) {}
+
+    constructor(private craftingListService: CraftingListService) { }
 
     addToCraftingList(sketch: Sketch) {
-        this.sketch.push(sketch);
-        this.sketchChanged.next(this.sketch.slice());
-    
-        // Update material list based on the sketch's materials
-        this.updateMaterials(sketch.materials);
+        // Call the service method to update materials with proper structure
+        this.craftingListService.updateMaterials(sketch.materials);
+        this.craftingListService.addToCraftingList(sketch);
+
     }
-    
+
 }
