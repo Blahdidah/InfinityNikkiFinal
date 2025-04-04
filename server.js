@@ -19,5 +19,17 @@ app.get('/api', (req, res) => {
     res.json({ message: 'Hello from the backend!' });
 });
 
+const Material = require('./models/Materials.js'); // Import model
+
+// Route to fetch all materials
+app.get('/api/materials', async (req, res) => {
+    try {
+        const materials = await Material.find(); // Fetch from DB
+        res.json(materials);
+    } catch (err) {
+        res.status(500).json({ message: "Error fetching materials", error: err });
+    }
+});
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

@@ -6,13 +6,12 @@ import { Material } from '../material.model';
 @Injectable({
     providedIn: 'root'
 })
-export class MaterialsService {
-    private apiURL = 'http://localhost:3000/api/materials'
-    
+export class MaterialService {
+    private apiUrl = 'http://localhost:3000/api/materials'; // Ensure this matches your backend
 
     constructor(private http: HttpClient) { }
 
-    getMaterials(): Observable<any> {
-        return this.http.get<Material[]>(this.apiURL);
+    getMaterials(): Observable<Material[]> {
+        return this.http.get<Material[]>(this.apiUrl);
     }
 }
