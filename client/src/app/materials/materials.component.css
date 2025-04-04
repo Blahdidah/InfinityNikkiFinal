@@ -1,21 +1,31 @@
+/*
+light green: #d8e2dc;
+Medium green: #7a9b76;
+*/
+
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+    color:#344e41;
 }
 
 th,
 td {
-    border: 1px solid #d8e2dc;
+    border: 1px solid #506A4D;
     padding: 8px;
     text-align: left;
 }
 
 th {
-    background-color: #ffe5d9;
+    background-color: #7a9b76;
     font-weight: bold;
 }
 
-tr:hover {
+tr{
     background-color: #ffcad4;
+}
+
+tr:hover {
+    background-color: #d8e2dc;
 }

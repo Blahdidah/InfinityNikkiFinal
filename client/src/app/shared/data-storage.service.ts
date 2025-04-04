@@ -12,7 +12,7 @@ export class DataStorageService {
     ) { }
 
     storeSketches() {
-        const sketches = this.sketchService.getSketches();
+        const sketches = this.sketchService.getAllSketches();
         this.http.put('NEEDSURL', sketches).subscribe(response => {
             console.log(response);
         });

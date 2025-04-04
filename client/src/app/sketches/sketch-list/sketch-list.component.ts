@@ -22,7 +22,9 @@ export class SketchListComponent implements OnInit, OnDestroy{
         private sketchService: SketchesService) { }
     
     ngOnInit(): void {
-        this.sketches = this.sketchService.getSketches();
+        this.sketchService.getAllSketches().subscribe(sketches => {
+            this.sketches = sketches;
+        });
         this.subscription = this.sketchService.sketchesChanged.subscribe(
             (sketches: Sketch[]) => {
                 this.sketches = sketches;

@@ -1,6 +1,7 @@
 import { Material } from "../material.model";
 
 export interface Sketch {
+    _id?: string;
     name: string;
     description: string;
     styles: ("Elegant" | "Fresh" | "Sweet" | "Sexy" | "Cool")[];

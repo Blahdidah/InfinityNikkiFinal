@@ -15,7 +15,19 @@ export class SketchesComponent implements OnInit {
     constructor(private sketchesService: SketchesService) { }
 
     ngOnInit() {
-        this.sketches = this.sketchesService.getSketches();
+        this.fetchSketches();
+    }
+
+    fetchSketches() {
+        this.sketchesService.getAllSketches().subscribe((data) => {
+            this.sketches = data;
+        });
+    }
+
+    viewSketchDetails(id: string) {
+        this.sketchesService.getSketchById(id).subscribe((data) => {
+            this.selectedSketch = data;
+        })
     }
 
     onSketchSelected(sketch: Sketch) {

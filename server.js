@@ -20,6 +20,7 @@ app.get('/api', (req, res) => {
 });
 
 const Material = require('./models/Materials.js'); // Import model
+const Sketch = require('./models/Sketches.js');
 
 // Route to fetch all materials
 app.get('/api/materials', async (req, res) => {
@@ -28,6 +29,15 @@ app.get('/api/materials', async (req, res) => {
         res.json(materials);
     } catch (err) {
         res.status(500).json({ message: "Error fetching materials", error: err });
+    }
+});
+
+app.get('/api/sketches', async (req, res) => {
+    try {
+        const sketches = await Sketch.find();
+        res.json(sketches);
+    } catch (err) {
+        res.status(500).send('Error fetching sketches: ' + err.message);
     }
 });
 

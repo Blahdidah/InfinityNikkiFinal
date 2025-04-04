@@ -65,7 +65,7 @@ export class CraftingListService {
                     material: {
                         name: materialName,
                         type: 'default',  // You can adjust these default values as needed
-                        sources: [],
+                        source: [],
                         rarity: 1
                     },
                     quantity: quantity

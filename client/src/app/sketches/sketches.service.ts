@@ -1,6 +1,7 @@
 import { Injectable } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
 import { Sketch } from "./sketches.model";
-
+import { Observable } from "rxjs";
 import { Subject } from "rxjs";
 
 @Injectable({
@@ -8,77 +9,26 @@ import { Subject } from "rxjs";
 })
     
 export class SketchesService{
-    private sketches: Sketch[] = [
-        {
-            name: 'Moonlight Gown',
-            description: 'A flowing gown inspired by the gentle glow of the moon.',
-            styles: ['Elegant', 'Cool'], 
-            attributes: ['Shimmering', 'Ethereal', 'Graceful'],
-            category: 'Clothing',
-            type: 'dress',
-            materials: [
-                { material: 'Silk Fabric', quantity: 3 }, 
-                { material: 'Moonstone', quantity: 1 }
-            ],
-            image_url: 'assets/images/moonlight_gown.jpg',
-            obtained: 'Gacha Event',
-            stars: 5,
-            part_of_set: true,
-            set_name: 'Lunar Elegance'
-        },
-        {
-            name: 'Sunset Veil',
-            description: 'A delicate veil infused with the warm colors of a sunset.',
-            styles: ['Elegant', 'Sweet'],
-            attributes: ['Flowing', 'Delicate', 'Lightweight'],
-            category: 'Accessories',
-            type: 'headwear',
-            materials: [
-                { material: 'Tulle Fabric', quantity: 2 }, 
-                { material: 'Golden Thread', quantity: 1 }
-            ],
-            image_url: 'assets/images/sunset_veil.jpg',
-            obtained: 'Crafting',
-            stars: 4,
-            part_of_set: true,
-            set_name: 'Sunset Serenade'
-        },
-        {
-            name: 'Rosy Kiss',
-            description: 'A deep red lip color that brings a touch of romance.',
-            styles: ['Sexy', 'Elegant'], 
-            attributes: ['Bold', 'Matte Finish', 'Long-lasting'],
-            category: 'Makeup',
-            type: 'lips',
-            materials: [
-                { material: 'Red Pigment', quantity: 2 }, 
-                { material: 'Lip Gloss Base', quantity: 1 }
-            ],
-            image_url: 'assets/images/rosy_kiss.jpg',
-            obtained: 'Boutique Shop',
-            stars: 3,
-            part_of_set: false
-        }
-    ];
+    private apiUrl = 'http://localhost:3000/api/sketches';
+    private sketches: Sketch[] = [];
+    
+    constructor( private http: HttpClient){}
+    
     sketchesChanged = new Subject<Sketch[]>();
 
-   //constructor(private craftingListService: CraftingListService) { }
-    // need to write a lot of different codes here. going to skip for a minute.
-    getSketches() {
-        return this.sketches.slice();
+    getAllSketches(): Observable<Sketch[]> {
+        return this.http.get<Sketch[]>(this.apiUrl);  // Fetch all sketches
     }
 
-    getSketch(): { name: string }[] {
+    getSketchById(id: string): Observable<Sketch> {
+        return this.http.get<Sketch>(`${this.apiUrl}/${id}`);  // Fetch sketch by ID
+    }
+
+    setSketches(sketches: Sketch[]): void {
+        this.sketches = sketches;
+    }
+
+    getSketches(): Sketch[] {
         return this.sketches;
     }
-
-    setSketches(sketches: Sketch[]) {
-        this.sketches = sketches;
-        this.sketchesChanged.next(this.sketches.slice())
-    }
-
-    //add to Craft List
-    //Update Sketch
-    // delete Sketch
-    
 }
