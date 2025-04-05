@@ -5,7 +5,7 @@
     
 <app-sketch-list (sketchSelected)="onSketchSelected($event)" class="sketch-list"></app-sketch-list>
     
-<app-sketch-detail *ngIf="selectedSketch" [sketch]="selectedSketch" (editClicked)="onEditSketch($event)"
+<app-sketch-detail *ngIf="selectedSketch" [sketch]="selectedSketch" (editClicked)="onEditSketch($event)" (sketchDeleted)="onSketchDeleted($event)"
     class="details">
 </app-sketch-detail>
     <div class="new-sketch-form">

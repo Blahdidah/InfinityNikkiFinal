@@ -39,4 +39,8 @@ export class SketchesService{
     updateSketch(id: string, updatedSketch: Sketch): Observable<Sketch> {
         return this.http.put<Sketch>(`${this.apiUrl}/${id}`, updatedSketch);
     }
+    
+    deleteSketch(id: string) {
+        return this.http.delete(`${this.apiUrl}/${id}`);
+    }
 }

@@ -129,4 +129,9 @@ export class SketchesComponent implements OnInit {
         }
     }
 
+    onSketchDeleted(deletedSketch: Sketch) {
+        this.sketches = this.sketches.filter(sketch => sketch._id !== deletedSketch._id);
+        this.selectedSketch = null;  // Clear the selected sketch
+    }
+
 }

@@ -10,9 +10,11 @@ import { ActivatedRoute, Params, Router } from "@angular/router";
 })
 export class SketchDetailComponent implements OnInit{
     @Input() sketch!: Sketch
-    id!: number;
     @Output() editClicked = new EventEmitter<Sketch>();
+    @Output() sketchDeleted = new EventEmitter<Sketch>();
+    id!: number;
     editingSketch: Sketch | null = null;
+    isDeleting: boolean = false;
 
 
     constructor(private sketchService: SketchesService,
@@ -35,5 +37,22 @@ export class SketchDetailComponent implements OnInit{
 
     editSketch() {
         this.editClicked.emit(this.sketch);
+    }
+
+    confirmDelete() {
+        this.isDeleting = true;  // Show the confirmation dialog
+    }
+
+    cancelDelete() {
+        this.isDeleting = false;  // Hide the confirmation dialog if the user cancels
+    }
+
+    deleteSketch() {
+        if (this.sketch && this.sketch._id) {
+            this.sketchService.deleteSketch(this.sketch._id).subscribe(() => {
+                this.sketchDeleted.emit(this.sketch);  // Emit event to parent to remove the sketch from the list
+                this.isDeleting = false;  // Hide the confirmation dialog
+            });
+        }
     }
 }

@@ -15,7 +15,13 @@
 </div>
 <app-sketch-item [sketch]="sketch"></app-sketch-item>
 <button (click)="editSketch()">Edit</button>
+<button (click)="confirmDelete()" class="btn btn-danger">Delete</button>
 
+<div *ngIf="isDeleting" class="delete-confirmation">
+    <p>Are you sure you want to delete this sketch?</p>
+    <button (click)="deleteSketch()" class="btn btn-danger">Yes, Delete</button>
+    <button (click)="cancelDelete()" class="btn btn-secondary">Cancel</button>
+</div>
 </div>
 <img class="sketch_img" [src]="sketch.image_url" alt="{{ sketch.name }}" />
 
