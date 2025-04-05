@@ -1,0 +1,22 @@
+.details{
+    display:flex;
+    flex-flow:row;
+}
+.col-1{
+    display:flex;
+    flex-flow:column;
+    padding: 0px 15px;
+}
+
+.sketch_img{
+    border: 2px solid #ffe5d9;
+    width: 40%;
+    height: 40%;
+}
+.sketch-ipie ul {
+    list-style: none;
+}
+
+.sketch-ipie ul li{
+    padding: 10px 0px;
+}

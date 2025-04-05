@@ -2,11 +2,14 @@
     display:flex;
     flex-flow: row;
     padding:10px;
-    background-color:pink;
 }
 
 .tb_item{
-    padding: 0px 10px;
+    padding: 10px 10px;
+}
+
+.tb_item:hover{
+    background-color: #A3B18A;
 }
 .tb_item a {
     color:#181d27;

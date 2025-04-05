@@ -31,4 +31,9 @@ export class SketchesService{
     getSketches(): Sketch[] {
         return this.sketches;
     }
+
+    addSketch(sketch: Sketch) {
+        return this.http.post<Sketch>(this.apiUrl, sketch);
+    }
+
 }

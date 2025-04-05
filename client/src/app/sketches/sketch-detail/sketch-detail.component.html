@@ -1,7 +1,21 @@
+<div class="details">
+    <div class="col-1">
 <h3>Sketch Details</h3>
 <p><strong>Name:</strong> {{ sketch.name }}</p>
 <p><strong>Description:</strong> {{ sketch.description }}</p>
-<!-- I would like an image and the recipe here as well -->
-<app-sketch-item 
-    [sketch]="sketch"
-></app-sketch-item>
+<p> <b>Styles: </b>{{ sketch.styles }}</p>
+<p><b>Category: </b>{{sketch.category}}</p>
+<p><b>Type: </b>{{ sketch.type}}</p>
+<div class="sketch-ipie">
+    <ul>
+        <li *ngFor="let material of sketch.materials">
+            <strong>{{ material.material }}</strong>: {{ material.quantity }}
+        </li>
+    </ul>
+</div>
+<app-sketch-item [sketch]="sketch"></app-sketch-item>
+</div>
+<img class="sketch_img" [src]="sketch.image_url" alt="{{ sketch.name }}" />
+
+
+</div>
