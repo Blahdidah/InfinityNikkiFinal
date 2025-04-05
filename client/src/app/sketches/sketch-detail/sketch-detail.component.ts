@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from "@angular/core";
+import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 import { Sketch } from "../sketches.model";
 import { SketchesService } from "../sketches.service";
 import { ActivatedRoute, Params, Router } from "@angular/router";
@@ -11,6 +11,9 @@ import { ActivatedRoute, Params, Router } from "@angular/router";
 export class SketchDetailComponent implements OnInit{
     @Input() sketch!: Sketch
     id!: number;
+    @Output() editClicked = new EventEmitter<Sketch>();
+    editingSketch: Sketch | null = null;
+
 
     constructor(private sketchService: SketchesService,
         private route: ActivatedRoute,
@@ -21,12 +24,16 @@ export class SketchDetailComponent implements OnInit{
             .subscribe(
                 (params: Params) => {
                     this.id = +params['id'];
-                    //this.sketch = this.sketchService.getSketch(this.id);
                 }
             )
     }
 
-    //add to crafting list
-    //edit sketch
-    //ondelete sketch
+
+    startEditing(sketch: Sketch) {
+        this.editingSketch = { ...sketch }; // shallow copy
+    }
+
+    editSketch() {
+        this.editClicked.emit(this.sketch);
+    }
 }

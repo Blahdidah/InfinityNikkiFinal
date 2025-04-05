@@ -5,11 +5,15 @@
     
 <app-sketch-list (sketchSelected)="onSketchSelected($event)" class="sketch-list"></app-sketch-list>
     
-<app-sketch-detail *ngIf="selectedSketch" [sketch]="selectedSketch" class="details"></app-sketch-detail>
+<app-sketch-detail *ngIf="selectedSketch" [sketch]="selectedSketch" (editClicked)="onEditSketch($event)"
+    class="details">
+</app-sketch-detail>
     <div class="new-sketch-form">
-        <h3>Add New Sketch</h3>
+        <h3 *ngIf="!isEditing">Add New Sketch</h3>
+        <h3 *ngIf="isEditing">Edit Sketch</h3>
     
-        <form (ngSubmit)="onAddSketch()" #sketchForm="ngForm" class="sketch-form">
+        <form (ngSubmit)="isEditing ? onUpdateSketch() : onAddSketch()" #sketchForm="ngForm" class="sketch-form">
+
     
             <!-- Name -->
             <div class="form-group">
@@ -103,7 +107,9 @@
                 <input type="text" name="set_name" [(ngModel)]="newSketch.set_name" />
             </div>
     
-            <button type="submit" [disabled]="sketchForm.invalid">Add Sketch</button>
+            <button type="submit" [disabled]="sketchForm.invalid">
+                {{ isEditing ? 'Update Sketch' : 'Add Sketch' }}
+            </button>
         </form>
     
     

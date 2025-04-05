@@ -14,6 +14,8 @@
     </ul>
 </div>
 <app-sketch-item [sketch]="sketch"></app-sketch-item>
+<button (click)="editSketch()">Edit</button>
+
 </div>
 <img class="sketch_img" [src]="sketch.image_url" alt="{{ sketch.name }}" />
 

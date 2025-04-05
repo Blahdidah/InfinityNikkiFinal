@@ -36,4 +36,7 @@ export class SketchesService{
         return this.http.post<Sketch>(this.apiUrl, sketch);
     }
 
+    updateSketch(id: string, updatedSketch: Sketch): Observable<Sketch> {
+        return this.http.put<Sketch>(`${this.apiUrl}/${id}`, updatedSketch);
+    }
 }

@@ -10,6 +10,7 @@ import { Sketch } from "./sketches.model";
 export class SketchesComponent implements OnInit {
     sketches: Sketch[] = [];
     selectedSketch: Sketch | null = null;
+    isEditing: boolean = false;
 
     newSketch: Sketch = {
         name: '',
@@ -103,5 +104,29 @@ export class SketchesComponent implements OnInit {
         this.materials = [{ material: '', quantity: 1 }];
         this.attributeInput = '';
     }
-    
+
+    onEditSketch(sketch: Sketch) {
+        this.newSketch = { ...sketch }; // Clone sketch into the form
+        this.materials = [...sketch.materials]; // Copy materials
+        this.attributeInput = sketch.attributes.join(', ');
+        this.isEditing = true;
+    }
+
+    onUpdateSketch() {
+        // Ensure the attributes and materials are updated
+        this.newSketch.attributes = this.attributeInput.split(',').map(attr => attr.trim());
+        this.newSketch.materials = this.materials;
+
+        // Check if _id is defined before calling updateSketch
+        if (this.newSketch._id) {
+            // Proceed with the update
+            this.sketchesService.updateSketch(this.newSketch._id, this.newSketch).subscribe((updated: Sketch) => {
+                this.fetchSketches(); // refresh the list
+                this.resetForm();   // clear and reset form
+            });
+        } else {
+            console.error("Sketch ID is undefined! Cannot update sketch.");
+        }
+    }
+
 }
