@@ -4,21 +4,26 @@
     <div class="list-container">
         <div class="materials">
             <h3>Materials Needed</h3>
-            <ul>
-                <li *ngFor="let material of materials">
-                    {{ material.material.name }}: {{ material.quantity }}
-                </li>
-            </ul>
+    
+            <!-- Group materials by type -->
+            <div *ngFor="let materialType of getGroupedMaterials()">
+                <h4>{{ materialType.type }}</h4>
+                <ul>
+                    <li *ngFor="let material of materialType.materials">
+                        {{ material.material.name }}: {{ material.quantity }}
+                    </li>
+                </ul>
+            </div>
         </div>
-
+    
         <div class="sketches">
             <h3>Sketches Added</h3>
             <ul>
                 <li *ngFor="let sketch of craftingList; let i = index">
                     {{ sketch.name }}
-                    <button (click)="removeSketch(i)">Remove</button>
+                    <button (click)="onRemoveSketch(i)">Remove</button>
                 </li>
             </ul>
         </div>
     </div>
-</div>
+    </div>

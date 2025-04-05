@@ -32,8 +32,25 @@ export class CraftListComponent implements OnInit, OnDestroy {
     this.cmChangeSub.unsubscribe();
   }
 
-  // Function to remove a sketch from the list
-  removeSketch(index: number) {
-    this.craftingListService.removeSketch(index);
+  getGroupedMaterials() {
+    const grouped: { type: string, materials: { material: Material, quantity: number }[] }[] = [];
+
+    this.materials.forEach((materialItem) => {
+      const existingGroup = grouped.find(group => group.type === materialItem.material.type);
+      if (existingGroup) {
+        existingGroup.materials.push(materialItem);
+      } else {
+        grouped.push({ type: materialItem.material.type, materials: [materialItem] });
+      }
+    });
+    return grouped;
+  }
+
+  // Remove sketch from craft list
+  onRemoveSketch(index: number) {
+    const confirmRemove = confirm('Are you sure you want to remove this sketch from the crafting list?');
+    if (confirmRemove) {
+      this.craftingListService.removeSketch(index);
+    }
   }
 }
