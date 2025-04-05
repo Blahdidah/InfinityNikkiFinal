@@ -103,4 +103,5 @@ export class SketchesComponent implements OnInit {
         this.materials = [{ material: '', quantity: 1 }];
         this.attributeInput = '';
     }
+    
 }

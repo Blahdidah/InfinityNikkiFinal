@@ -1,110 +1,114 @@
 <div class="container">
 <h2>Sketches</h2>
 <div class="sketch_cont">
+
+    
 <app-sketch-list (sketchSelected)="onSketchSelected($event)" class="sketch-list"></app-sketch-list>
     
-<app-sketch-detail *ngIf="selectedSketch" [sketch]="selectedSketch" class="sketch-details"></app-sketch-detail>
+<app-sketch-detail *ngIf="selectedSketch" [sketch]="selectedSketch" class="details"></app-sketch-detail>
+    <div class="new-sketch-form">
+        <h3>Add New Sketch</h3>
+    
+        <form (ngSubmit)="onAddSketch()" #sketchForm="ngForm" class="sketch-form">
+    
+            <!-- Name -->
+            <div class="form-group">
+                <label>Name:</label>
+                <input type="text" name="name" [(ngModel)]="newSketch.name" required />
+            </div>
+    
+            <!-- Description -->
+            <div class="form-group">
+                <label>Description:</label>
+                <input type="text" name="description" [(ngModel)]="newSketch.description" required />
+            </div>
+    
+            <!-- Styles -->
+            <fieldset class="form-group">
+                <legend>Styles:</legend>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" (change)="toggleStyle('Elegant', $event)" /> Elegant</label>
+                    <label><input type="checkbox" (change)="toggleStyle('Fresh', $event)" /> Fresh</label>
+                    <label><input type="checkbox" (change)="toggleStyle('Sweet', $event)" /> Sweet</label>
+                    <label><input type="checkbox" (change)="toggleStyle('Sexy', $event)" /> Sexy</label>
+                    <label><input type="checkbox" (change)="toggleStyle('Cool', $event)" /> Cool</label>
+                </div>
+            </fieldset>
+    
+            <!-- Attributes -->
+            <div class="form-group">
+                <label>Attributes (comma separated):</label>
+                <input type="text" name="attributes" [(ngModel)]="attributeInput" />
+            </div>
+    
+            <!-- Category -->
+            <div class="form-group">
+                <label>Category:</label>
+                <select name="category" [(ngModel)]="newSketch.category" required>
+                    <option value="">-- Select --</option>
+                    <option value="Clothing">Clothing</option>
+                    <option value="Accessories">Accessories</option>
+                    <option value="Makeup">Makeup</option>
+                </select>
+            </div>
+    
+            <!-- Type -->
+            <div class="form-group">
+                <label>Type:</label>
+                <input type="text" name="type" [(ngModel)]="newSketch.type" required />
+            </div>
+    
+            <!-- Materials -->
+            <div class="form-group">
+                <h4>Materials</h4>
+                <div *ngFor="let mat of materials; let i = index" class="material-entry">
+                    <input type="text" [(ngModel)]="mat.material" name="material{{ i }}" placeholder="Material name"
+                        required />
+                    <input type="number" [(ngModel)]="mat.quantity" name="quantity{{ i }}" placeholder="Quantity" min="1"
+                        required />
+                    <button type="button" (click)="removeMaterial(i)">Remove</button>
+                </div>
+                <button type="button" (click)="addMaterial()">Add Material</button>
+            </div>
+    
+            <!-- Image -->
+            <div class="form-group">
+                <label>Image URL:</label>
+                <input type="url" name="image_url" [(ngModel)]="newSketch.image_url" />
+            </div>
+    
+            <!-- Obtained -->
+            <div class="form-group">
+                <label>Obtained:</label>
+                <input type="text" name="obtained" [(ngModel)]="newSketch.obtained" placeholder="e.g. Event, Store" />
+            </div>
+    
+            <!-- Stars -->
+            <div class="form-group">
+                <label>Stars:</label>
+                <input type="number" name="stars" [(ngModel)]="newSketch.stars" min="1" max="5" required />
+            </div>
+    
+            <!-- Part of Set -->
+            <div class="form-group">
+                <label>
+                    <input type="checkbox" name="part_of_set" [(ngModel)]="newSketch.part_of_set" />
+                    Part of a set?
+                </label>
+            </div>
+    
+            <!-- Set Name -->
+            <div class="form-group" *ngIf="newSketch.part_of_set">
+                <label>Set Name:</label>
+                <input type="text" name="set_name" [(ngModel)]="newSketch.set_name" />
+            </div>
+    
+            <button type="submit" [disabled]="sketchForm.invalid">Add Sketch</button>
+        </form>
+    
+    
+    </div>
 </div>
 
-<div class="new-sketch-form">
-<h3>Add New Sketch</h3>
 
-<form (ngSubmit)="onAddSketch()" #sketchForm="ngForm" class="sketch-form">
-
-    <!-- Name -->
-    <div class="form-group">
-        <label>Name:</label>
-        <input type="text" name="name" [(ngModel)]="newSketch.name" required />
-    </div>
-
-    <!-- Description -->
-    <div class="form-group">
-        <label>Description:</label>
-        <input type="text" name="description" [(ngModel)]="newSketch.description" required />
-    </div>
-
-    <!-- Styles -->
-    <fieldset class="form-group">
-        <legend>Styles:</legend>
-        <div class="checkbox-group">
-            <label><input type="checkbox" (change)="toggleStyle('Elegant', $event)" /> Elegant</label>
-            <label><input type="checkbox" (change)="toggleStyle('Fresh', $event)" /> Fresh</label>
-            <label><input type="checkbox" (change)="toggleStyle('Sweet', $event)" /> Sweet</label>
-            <label><input type="checkbox" (change)="toggleStyle('Sexy', $event)" /> Sexy</label>
-            <label><input type="checkbox" (change)="toggleStyle('Cool', $event)" /> Cool</label>
-        </div>
-    </fieldset>
-
-    <!-- Attributes -->
-    <div class="form-group">
-        <label>Attributes (comma separated):</label>
-        <input type="text" name="attributes" [(ngModel)]="attributeInput" />
-    </div>
-
-    <!-- Category -->
-    <div class="form-group">
-        <label>Category:</label>
-        <select name="category" [(ngModel)]="newSketch.category" required>
-            <option value="">-- Select --</option>
-            <option value="Clothing">Clothing</option>
-            <option value="Accessories">Accessories</option>
-            <option value="Makeup">Makeup</option>
-        </select>
-    </div>
-
-    <!-- Type -->
-    <div class="form-group">
-        <label>Type:</label>
-        <input type="text" name="type" [(ngModel)]="newSketch.type" required />
-    </div>
-
-    <!-- Materials -->
-    <div class="form-group">
-        <h4>Materials</h4>
-        <div *ngFor="let mat of materials; let i = index" class="material-entry">
-            <input type="text" [(ngModel)]="mat.material" name="material{{ i }}" placeholder="Material name" required />
-            <input type="number" [(ngModel)]="mat.quantity" name="quantity{{ i }}" placeholder="Quantity" min="1"
-                required />
-            <button type="button" (click)="removeMaterial(i)">Remove</button>
-        </div>
-        <button type="button" (click)="addMaterial()">Add Material</button>
-    </div>
-
-    <!-- Image -->
-    <div class="form-group">
-        <label>Image URL:</label>
-        <input type="url" name="image_url" [(ngModel)]="newSketch.image_url" />
-    </div>
-
-    <!-- Obtained -->
-    <div class="form-group">
-        <label>Obtained:</label>
-        <input type="text" name="obtained" [(ngModel)]="newSketch.obtained" placeholder="e.g. Event, Store" />
-    </div>
-
-    <!-- Stars -->
-    <div class="form-group">
-        <label>Stars:</label>
-        <input type="number" name="stars" [(ngModel)]="newSketch.stars" min="1" max="5" required />
-    </div>
-
-    <!-- Part of Set -->
-    <div class="form-group">
-        <label>
-            <input type="checkbox" name="part_of_set" [(ngModel)]="newSketch.part_of_set" />
-            Part of a set?
-        </label>
-    </div>
-
-    <!-- Set Name -->
-    <div class="form-group" *ngIf="newSketch.part_of_set">
-        <label>Set Name:</label>
-        <input type="text" name="set_name" [(ngModel)]="newSketch.set_name" />
-    </div>
-
-    <button type="submit" [disabled]="sketchForm.invalid">Add Sketch</button>
-</form>
-
-
-</div>
 </div>
