@@ -111,24 +111,13 @@ export class CraftingListService {
 
     // Recalculate the materials list when sketches are added or removed
     private recalculateMaterials() {
-        console.log('--- Recalculating Materials ---');
-
         this.materialsMap = {};
-
-        console.log('Crafting List:', this.craftingList);
-        console.log('Full Material List:', this.fullMaterialList);
-
         this.craftingList.forEach(sketch => {
-            console.log(`Processing sketch: ${sketch.name}`);
             sketch.materials.forEach(item => {
                 const materialName = item.material;
-                console.log(`  Material required: ${materialName}, quantity: ${item.quantity}`);
-
                 const materialInfo = this.fullMaterialList.find(mat => mat.name === materialName);
 
                 if (materialInfo) {
-                    console.log(`Found material info:`, materialInfo);
-
                     if (this.materialsMap[materialName]) {
                         this.materialsMap[materialName].quantity += item.quantity;
                     } else {
@@ -142,8 +131,6 @@ export class CraftingListService {
                 }
             });
         });
-
-        console.log('Final materials map:', this.materialsMap);
 
         this.materialsChanged.next(this.getMaterials());
     }

@@ -27,7 +27,6 @@ export class CraftListComponent implements OnInit, OnDestroy {
     this.craftingListService.fetchMaterials().subscribe(materials => {
       this.materials = materials;
       this.getGroupedMaterialsByType();
-      console.log(this.materials);
     });
 
     this.cmChangeSub = this.craftingListService.materialsChanged.subscribe((materials) => {

@@ -18,7 +18,6 @@ export class MaterialsComponent implements OnInit {
     ngOnInit(): void {
         this.materialService.getMaterials().subscribe(
             (data) => {
-                console.log('Fetched Materials:', data);
                 this.materials = data;
             },
             (error) => {
