@@ -1,7 +1,9 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from "@angular/core";
 import { Material } from "../material.model";
 import { Sketch } from "../sketches/sketches.model";
-import { Subject } from "rxjs";
+import { Subject, Observable } from "rxjs";
+import { map } from 'rxjs/operators';
 
 @Injectable({ providedIn: 'root' })
 export class CraftingListService {
@@ -12,7 +14,34 @@ export class CraftingListService {
     private materialsMap: { [key: string]: { material: Material, quantity: number } } = {}; // Store materials
     private sketches: Sketch[] = []; // List of sketches
     private materials: { material: Material, quantity: number }[] = [];
+    private fullMaterialList: Material[] = [];
     
+    constructor(private http: HttpClient) { }
+    
+    fetchCraftListFromServer() {
+        this.http.get<{ sketches: Sketch[] }>('/api/craft-list')
+            .subscribe({
+                next: (response) => {
+                    this.craftingList = response.sketches;
+                    this.recalculateMaterials();
+                    this.sketchesChanged.next(this.craftingList.slice());
+                },
+                error: (err) => {
+                    console.error('Failed to load crafting list:', err);
+                }
+            });
+    }
+
+    fetchMaterials(): Observable<{ material: Material, quantity: number }[]> {
+        return this.http.get<Material[]>('/api/materials').pipe(
+            map((materials: Material[]) => {
+                this.fullMaterialList = materials;
+                this.recalculateMaterials();  // <== make sure this runs here
+                return this.getMaterials();
+            })
+        );
+    }
+
 
     // Add a sketch to the crafting list
     addToCraftingList(sketch: Sketch) {
@@ -22,8 +51,8 @@ export class CraftingListService {
     }
 
     // Get the list of consolidated materials
-    getMaterials() {
-        return Object.values(this.materialsMap); // Return the consolidated materials
+    getMaterials(): { material: Material, quantity: number }[] {
+        return Object.values(this.materialsMap);
     }
 
     // Get the sketches in the crafting list
@@ -53,23 +82,25 @@ export class CraftingListService {
     // Update the materials list based on a sketch's materials
     updateMaterials(materials: { material: string, quantity: number }[]) {
         materials.forEach((item) => {
-            const materialName = item.material;
+            const materialName = item.material; // Material name as a string
             const quantity = item.quantity;
 
-            if (this.materialsMap[materialName]) {
-                // If material exists, increase quantity
-                this.materialsMap[materialName].quantity += quantity;
+            // Find the full Material object based on the material name
+            const materialInfo = this.materials.find(matObj => matObj.material.name === materialName); // matObj.material refers to the Material object
+
+            if (materialInfo) {
+                // If the material is already in the materialsMap, update the quantity
+                if (this.materialsMap[materialName]) {
+                    this.materialsMap[materialName].quantity += quantity;
+                } else {
+                    // If it's a new material, add it to the materialsMap with the full Material object
+                    this.materialsMap[materialName] = {
+                        material: materialInfo.material, // Use the full Material object
+                        quantity: quantity
+                    };
+                }
             } else {
-                // If material doesn't exist, add it
-                this.materialsMap[materialName] = {
-                    material: {
-                        name: materialName,
-                        type: 'default',  // You can adjust these default values as needed
-                        source: [],
-                        rarity: 1
-                    },
-                    quantity: quantity
-                };
+                console.error(`Material not found: ${materialName}`);
             }
         });
 
@@ -80,12 +111,61 @@ export class CraftingListService {
 
     // Recalculate the materials list when sketches are added or removed
     private recalculateMaterials() {
-        this.materialsMap = {};  // Clear existing map
+        console.log('--- Recalculating Materials ---');
 
-        this.sketches.forEach(sketch => {
-            this.updateMaterials(sketch.materials); // Re-add materials
+        this.materialsMap = {};
+
+        console.log('Crafting List:', this.craftingList);
+        console.log('Full Material List:', this.fullMaterialList);
+
+        this.craftingList.forEach(sketch => {
+            console.log(`Processing sketch: ${sketch.name}`);
+            sketch.materials.forEach(item => {
+                const materialName = item.material;
+                console.log(`  Material required: ${materialName}, quantity: ${item.quantity}`);
+
+                const materialInfo = this.fullMaterialList.find(mat => mat.name === materialName);
+
+                if (materialInfo) {
+                    console.log(`Found material info:`, materialInfo);
+
+                    if (this.materialsMap[materialName]) {
+                        this.materialsMap[materialName].quantity += item.quantity;
+                    } else {
+                        this.materialsMap[materialName] = {
+                            material: materialInfo,
+                            quantity: item.quantity
+                        };
+                    }
+                } else {
+                    console.warn(`Material "${materialName}" not found in fullMaterialList`);
+                }
+            });
         });
 
-        this.materialsChanged.next(Object.values(this.materialsMap));
+        console.log('Final materials map:', this.materialsMap);
+
+        this.materialsChanged.next(this.getMaterials());
     }
+
+
+
+    // Group materials by type (how they are obtained)
+    groupMaterialsByType() {
+        const groupedByType: { [key: string]: { material: Material; quantity: number }[] } = {};
+
+        // Loop through each material in the materials map and group by type
+        Object.values(this.materialsMap).forEach(materialEntry => {
+            const materialType = materialEntry.material.type; // Access type of material (how it's obtained)
+
+            if (!groupedByType[materialType]) {
+                groupedByType[materialType] = [];
+            }
+
+            groupedByType[materialType].push(materialEntry);
+        });
+
+        return groupedByType;
+    }
+
 }

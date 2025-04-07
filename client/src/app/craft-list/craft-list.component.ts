@@ -14,36 +14,54 @@ export class CraftListComponent implements OnInit, OnDestroy {
   craftingList: Sketch[] = [];
   materials: { material: Material, quantity: number }[] = [];
   private cmChangeSub!: Subscription;
+  private sketchesSub!: Subscription;
+  loading = true;
 
   constructor(private craftingListService: CraftingListService) { }
 
   ngOnInit(): void {
-    // Fetch the crafting list and materials
+    this.craftingListService.fetchCraftListFromServer();
     this.craftingList = this.craftingListService.getSketches();
-    this.materials = this.craftingListService.getMaterials();
 
-    // Subscribe to changes in materials
+    // Fetch and set only relevant materials from the server
+    this.craftingListService.fetchMaterials().subscribe(materials => {
+      this.materials = materials;
+      this.getGroupedMaterialsByType();
+      console.log(this.materials);
+    });
+
     this.cmChangeSub = this.craftingListService.materialsChanged.subscribe((materials) => {
       this.materials = materials;
+    });
+
+    this.sketchesSub = this.craftingListService.sketchesChanged.subscribe((sketches) => {
+      this.craftingList = sketches;
     });
   }
 
   ngOnDestroy(): void {
     this.cmChangeSub.unsubscribe();
+    this.sketchesSub.unsubscribe();
   }
 
-  getGroupedMaterials() {
-    const grouped: { type: string, materials: { material: Material, quantity: number }[] }[] = [];
+  getGroupedMaterialsByType() {
+    const groupedMaterials: { type: string, materials: { material: Material, quantity: number }[] }[] = [];
 
-    this.materials.forEach((materialItem) => {
-      const existingGroup = grouped.find(group => group.type === materialItem.material.type);
+    this.materials.forEach(materialItem => {
+      const type = materialItem.material.type; // Access the 'type' property for grouping
+      const existingGroup = groupedMaterials.find(group => group.type === type);
+
       if (existingGroup) {
         existingGroup.materials.push(materialItem);
       } else {
-        grouped.push({ type: materialItem.material.type, materials: [materialItem] });
+        groupedMaterials.push({
+          type: type,
+          materials: [materialItem]
+        });
       }
     });
-    return grouped;
+
+    return groupedMaterials;
   }
 
   // Remove sketch from craft list

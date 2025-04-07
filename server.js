@@ -2,12 +2,14 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const sketchesRoute = require('./client/server/routes/sketches');
+const craftListRoutes = require('./client/server/routes/craft-list');
 require('dotenv').config();
 
 const app = express();
 app.use(cors());
 app.use(express.json());
 app.use('/api/sketches', sketchesRoute);
+app.use('/api/craft-list', craftListRoutes);
 
 mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => console.log('MongoDB Connected'))
@@ -23,7 +25,7 @@ app.get('/api', (req, res) => {
     res.json({ message: 'Hello from the backend!' });
 });
 
-const Material = require('./client/server/models/Materials'); // Import model
+const Material = require('./client/server/models/Materials'); 
 const Sketch = require('./client/server/models/Sketches.js');
 
 // Route to fetch all materials

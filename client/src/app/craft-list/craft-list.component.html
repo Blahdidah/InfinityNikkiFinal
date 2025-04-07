@@ -1,20 +1,22 @@
 <div class="crafting-list">
     <h2>Crafting List</h2>
-
+    <div *ngIf="loading" class="loading-indicator">
+        <div *ngIf="!loading">Loading crafting list...
+        </div>
+    </div>
     <div class="list-container">
         <div class="materials">
             <h3>Materials Needed</h3>
     
             <!-- Group materials by type -->
-            <div *ngFor="let materialType of getGroupedMaterials()">
-                <h4>{{ materialType.type }}</h4>
+            <div *ngFor="let group of getGroupedMaterialsByType()">
                 <ul>
-                    <li *ngFor="let material of materialType.materials">
+                    <li *ngFor="let material of group.materials">
                         {{ material.material.name }}: {{ material.quantity }}
                     </li>
                 </ul>
             </div>
-        </div>
+            </div>
     
         <div class="sketches">
             <h3>Sketches Added</h3>
