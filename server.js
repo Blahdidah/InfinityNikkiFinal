@@ -3,13 +3,16 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const sketchesRoute = require('./client/server/routes/sketches');
 const craftListRoutes = require('./client/server/routes/craft-list');
+const materialsRoutes = require('./client/server/routes/materials');
 require('dotenv').config();
 
 const app = express();
 app.use(cors());
 app.use(express.json());
+
 app.use('/api/sketches', sketchesRoute);
 app.use('/api/craft-list', craftListRoutes);
+app.use('/api/materials', materialsRoutes);
 
 mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => console.log('MongoDB Connected'))

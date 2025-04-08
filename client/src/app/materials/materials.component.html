@@ -1,3 +1,38 @@
+<div class="material-form">
+    <h3>New Material Entry</h3>
+    <form (ngSubmit)="onSubmit()" #materialForm="ngForm">
+        <div class="form-group">
+            <label>Name:</label>
+            <input type="text" name="name" [(ngModel)]="editableMaterial.name" required />
+        </div>
+
+        <div class="form-group">
+            <label>Type:</label>
+            <input type="text" name="type" [(ngModel)]="editableMaterial.type" required />
+        </div>
+
+        <div class="form-group">
+            <label>Source (comma-separated):</label>
+            <input type="text" name="source" [(ngModel)]="sourceInput" />
+        </div>
+
+        <div class="form-group">
+            <label>Rarity:</label>
+            <input type="number" name="rarity" [(ngModel)]="editableMaterial.rarity" min="1" max="5" required />
+        </div>
+
+        <div class="form-group">
+            <label>Image URL:</label>
+            <input type="url" name="image_url" [(ngModel)]="editableMaterial.image_url" />
+        </div>
+
+        <button type="submit" [disabled]="materialForm.invalid">
+            {{ isEditing ? 'Update Material' : 'Add Material' }}
+        </button>
+        <button type="button" *ngIf="isEditing" (click)="onCancelEdit()">Cancel</button>
+    </form>
+</div>
+
 <table>
     <thead>
         <tr>
@@ -5,18 +40,18 @@
             <th>Rarity</th>
             <th>Type</th>
             <th>Sources</th>
+            <th>Image</th>
+            <th>Actions</th>
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let material of materials">
+        <tr *ngFor="let material of materials; let i = index">
             <td>{{ material.name }}</td>
             <td>{{ material.rarity }}</td>
             <td>{{ material.type }}</td>
-            <td>
-                <ul>
-                    <li *ngFor="let src of material.source">{{ src }}</li>
-                </ul>
-            </td>
+            <td>{{ material.source.join(', ') }}</td>
+            <td><img [src]="material.image_url" alt="Image" width="50" /></td>
+            <td><button (click)="onEditMaterial(i)">Edit</button></td>
         </tr>
-    </tbody>
-</table>
+        </tbody>
+        </table>

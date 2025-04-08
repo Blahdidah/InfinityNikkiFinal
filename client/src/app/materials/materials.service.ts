@@ -14,5 +14,15 @@ export class MaterialService {
     getMaterials(): Observable<Material[]> {
         return this.http.get<Material[]>(this.apiUrl);
     }
+
+    addMaterial(material: Material): Observable<Material> {
+        return this.http.post<Material>(this.apiUrl, material);
+    }
+    updateMaterial(id: string, material: Material): Observable<Material> {
+        return this.http.put<Material>(`${this.apiUrl}/${id}`, material);
+    }
+
+    deleteMaterial(id: string): Observable<any> {
+        return this.http.delete(`${this.apiUrl}/${id}`);
+    }
 }
-// this is a note jus so there's a change to make these merge?

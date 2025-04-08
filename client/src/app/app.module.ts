@@ -18,6 +18,7 @@ import { SketchEditComponent } from './sketches/sketch-edit/sketch-edit.componen
 import { CraftingListService } from './craft-list/craft-list.service';
 import { CraftListComponent } from './craft-list/craft-list.component';
 import { CraftEditComponent } from './craft-list/craft-edit/craft-edit.component';
+import { MaterialsComponent } from './materials/materials.component';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { CraftEditComponent } from './craft-list/craft-edit/craft-edit.component
     SketchDetailComponent,
     SketchItemComponent,
     SketchesComponent,
+    MaterialsComponent
     
   ],
   imports: [
