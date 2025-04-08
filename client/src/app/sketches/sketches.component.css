@@ -3,6 +3,7 @@
     display: flex;
     flex-flow: row;
     padding-top:20px;
+    gap:60px;
 }
 .new-sketch-form{
     padding-left: 10px;
@@ -10,6 +11,7 @@
     background-color:#FFE5D9 ;
     border: 3px solid #8ba989; 
     padding-bottom: 20px;
+    filter: drop-shadow(7px 9px 2px #767476);
 }
 
 .sketch-list {
