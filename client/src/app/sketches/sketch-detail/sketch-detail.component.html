@@ -18,13 +18,13 @@
         <!-- Add Sketch to Crafting List Button -->
         <app-sketch-item [sketch]="sketch"></app-sketch-item>
 
-        <button (click)="editSketch()">Edit</button>
-        <button (click)="confirmDelete()" class="btn btn-danger">Delete</button>
+        <button (click)="editSketch()" class="btn-edit">Edit</button>
+        <button (click)="confirmDelete()" class="btn-danger">Delete</button>
 
         <div *ngIf="isDeleting" class="delete-confirmation">
             <p>Are you sure you want to delete this sketch?</p>
-            <button (click)="deleteSketch()" class="btn btn-danger">Yes, Delete</button>
-            <button (click)="cancelDelete()" class="btn btn-secondary">Cancel</button>
+            <button (click)="deleteSketch()" class="btn-danger">Yes, Delete</button>
+            <button (click)="cancelDelete()" class="btn-secondary">Cancel</button>
         </div>
     </div>
 

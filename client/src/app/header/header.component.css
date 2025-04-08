@@ -10,7 +10,9 @@
 
 .tb_item:hover{
     background-color: #A3B18A;
+    border-radius: 10px;
 }
+
 .tb_item a {
     color:#181d27;
     text-decoration: none;

@@ -22,3 +22,14 @@
 .sketch-ipie ul li{
     padding: 10px 0px;
 }
+
+.btn-danger, .btn-edit, .addToCL{
+    font-family: "Delius", cursive;
+        width: 55%;
+        height: 25px;
+        background-color: #FFCAD4;
+        color: #506A4D;
+        font-weight: 600;
+        border-radius: 5px;
+        margin: 10px 0px;
+    }

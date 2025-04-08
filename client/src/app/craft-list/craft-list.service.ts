@@ -111,10 +111,16 @@ export class CraftingListService {
 
     // Recalculate the materials list when sketches are added or removed
     private recalculateMaterials() {
+        if (!this.fullMaterialList || this.fullMaterialList.length === 0) {
+            console.warn('⚠️ fullMaterialList is empty — skipping material recalculation.');
+            return;
+        }
+
         this.materialsMap = {};
+
         this.craftingList.forEach(sketch => {
             sketch.materials.forEach(item => {
-                const materialName = item.material;
+                const materialName = (item.material as any)?.name || item.material;
                 const materialInfo = this.fullMaterialList.find(mat => mat.name === materialName);
 
                 if (materialInfo) {

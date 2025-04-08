@@ -10,6 +10,7 @@
     
             <!-- Group materials by type -->
             <div *ngFor="let group of getGroupedMaterialsByType()">
+                <h4>{{ group.type }}</h4>
                 <ul>
                     <li *ngFor="let material of group.materials">
                         {{ material.material.name }}: {{ material.quantity }}

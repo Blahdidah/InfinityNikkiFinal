@@ -3,7 +3,9 @@
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    font-family: Arial, sans-serif;
+    font-family: "Delius", cursive;
+    background-color: #FFCAD4;
+    padding: 20px;
 }
 
 .list-container {
@@ -24,33 +26,6 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.materials {
-    background-color: #f9f9f9;
-}
-
-.sketches {
-    background-color: #e0e0e0;
-}
-
-button {
-    margin-left: 10px;
-    background-color: #f44336;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-button:hover {
-    background-color: #d32f2f;
-}
-
-.crafting-list {
-    padding: 20px;
-    background-color: #f5f5f5;
-}
-
 .list-container {
     display: flex;
     justify-content: space-between;
@@ -59,19 +34,22 @@ button:hover {
 .materials,
 .sketches {
     width: 45%;
+    background-color: #BBC6A9;
 }
 
 button {
     margin-left: 10px;
     padding: 5px 10px;
-    background-color: #d9534f;
+    background-color: #EA5D72;
     color: white;
     border: none;
     cursor: pointer;
+    border-radius: 5px;
 }
 
 button:hover {
-    background-color: #c9302c;
+    background-color: #F4ACB7;
+    color:#2C3B2B
 }
 
 h3 {
@@ -80,7 +58,7 @@ h3 {
 
 h4 {
     font-size: 1.1em;
-    color: #666;
+    color: #2C3B2B;
     margin: 5px 0px;
 }
 
@@ -91,10 +69,5 @@ ul{
 
 .sketches ul li{
     padding: 5px 0px;
-}
-
-.struck-through {
-    text-decoration: line-through;
-    color: grey;
-    /* Optional: make the struck-through text grey */
+    font-weight: 500;
 }
