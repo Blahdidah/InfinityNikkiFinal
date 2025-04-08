@@ -8,6 +8,16 @@
     padding: 20px;
 }
 
+.cl-header{
+    display:flex;
+    flex-flow:row;
+    padding-bottom:20px;
+}
+
+.nikkinote{
+    width:75px
+}
+
 .list-container {
     display: flex;
     width: 100%;
@@ -23,7 +33,7 @@
     padding: 15px;
     border: 1px solid #ccc;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    filter: drop-shadow(7px 9px 2px #767476);
 }
 
 .list-container {
@@ -70,4 +80,23 @@ ul{
 .sketches ul li{
     padding: 5px 0px;
     font-weight: 500;
+}
+
+.material-image{
+    width:45px;
+}
+
+.cl-sw{
+    display:flex;
+    flex-direction: column;
+}
+
+.mini-sketch{
+    width:75px;
+}
+
+.cl-group{
+    padding: 5px 10px;
+    border: 3px solid#FFE5D9;
+    margin:10px;
 }

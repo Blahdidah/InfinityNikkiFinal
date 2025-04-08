@@ -1,5 +1,8 @@
 <div class="crafting-list">
-    <h2>Crafting List</h2>
+    <div class="cl-header">
+        <h2>Crafting List</h2>
+        <img src="\assets\Community_Emotes_I_1_Nikki_1.webp" class="nikkinote">
+    </div>
     <div *ngIf="loading" class="loading-indicator">
         <div *ngIf="!loading">Loading crafting list...
         </div>
@@ -11,22 +14,28 @@
             <!-- Group materials by type -->
             <div *ngFor="let group of getGroupedMaterialsByType()">
                 <h4>{{ group.type }}:</h4>
-                <ul>
-                    <li *ngFor="let material of group.materials">
-                        {{ material.material.name }}: {{ material.quantity }}
-                    </li>
-                </ul>
+                <div>
+                    <div *ngFor="let material of group.materials">
+                        <img [src]="material.material.image_url" alt="{{material.material.name}}" class="material-image">
+                        <span>{{ material.material.name }}: </span><span>{{ material.quantity }}</span>
+                    </div>
+                </div>
             </div>
             </div>
     
         <div class="sketches">
             <h3><u>Sketches Added</u>:</h3>
-            <ul>
-                <li *ngFor="let sketch of craftingList">
-                    {{ sketch.name }}
+            <div>
+                <div class="cl-sw">
+                <div *ngFor="let sketch of craftingList" class="cl-group">
+                    <span>{{ sketch.name }} </span>
                     <button *ngIf="sketch._id" (click)="onRemoveSketch(sketch._id)">Remove</button>
-                </li>
-            </ul>
+                    <div><img src="{{sketch.image_url}}" class="mini-sketch">
+                    
+                </div>
+                </div>
+                </div>
+            </div>
         </div>
     </div>
     </div>
