@@ -16,6 +16,7 @@ export class SketchDetailComponent implements OnInit{
     editingSketch: Sketch | null = null;
     isDeleting: boolean = false;
     successMessage: string | null = null;
+    isEditing = false;
 
 
     constructor(private sketchService: SketchesService,

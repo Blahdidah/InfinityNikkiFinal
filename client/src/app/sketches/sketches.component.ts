@@ -134,4 +134,24 @@ export class SketchesComponent implements OnInit {
         this.selectedSketch = null;  // Clear the selected sketch
     }
 
+    onCancelEdit() {
+        this.isEditing = false;
+        this.newSketch = {
+            name: '',
+            description: '',
+            styles: [],
+            attributes: [],
+            category: 'Clothing',
+            type: '',
+            materials: [],
+            image_url: '',
+            obtained: '',
+            stars: 1,
+            part_of_set: false,
+            set_name: ''
+        };
+        this.materials = [];  // reset materials if you use separate tracking
+        this.attributeInput = '';
+    }
+
 }

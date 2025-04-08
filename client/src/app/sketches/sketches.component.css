@@ -6,7 +6,10 @@
 }
 .new-sketch-form{
     padding-left: 10px;
-    min-width: 50%;
+    min-width: 40%;
+    background-color:#FFE5D9 ;
+    border: 3px solid #8ba989; 
+    padding-bottom: 20px;
 }
 
 .sketch-list {

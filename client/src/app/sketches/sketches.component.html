@@ -105,6 +105,8 @@
             <button type="submit" [disabled]="sketchForm.invalid">
                 {{ isEditing ? 'Update Sketch' : 'Add Sketch' }}
             </button>
+            <button type="button" *ngIf="isEditing" (click)="onCancelEdit()">Cancel</button>
+
         </form>
     
     

@@ -6,11 +6,11 @@
     </div>
     <div class="list-container">
         <div class="materials">
-            <h3>Materials Needed</h3>
+            <h3><u>Materials Needed</u>:</h3>
     
             <!-- Group materials by type -->
             <div *ngFor="let group of getGroupedMaterialsByType()">
-                <h4>{{ group.type }}</h4>
+                <h4>{{ group.type }}:</h4>
                 <ul>
                     <li *ngFor="let material of group.materials">
                         {{ material.material.name }}: {{ material.quantity }}
@@ -20,7 +20,7 @@
             </div>
     
         <div class="sketches">
-            <h3>Sketches Added</h3>
+            <h3><u>Sketches Added</u>:</h3>
             <ul>
                 <li *ngFor="let sketch of craftingList">
                     {{ sketch.name }}
