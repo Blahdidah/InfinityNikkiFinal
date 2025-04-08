@@ -62,4 +62,28 @@ router.get('/', async (req, res) => {
     }
 });
 
+router.delete('/remove-from-craft-list/:sketchId', async (req, res) => {
+    const { sketchId } = req.params;
+
+    try {
+        const craftList = await CraftList.findOne();
+
+        if (!craftList) {
+            return res.status(404).json({ message: 'Crafting list not found' });
+        }
+
+        // Remove the sketch by filtering it out
+        craftList.sketches = craftList.sketches.filter(
+            s => s.toString() !== sketchId
+        );
+
+        await craftList.save();
+
+        return res.status(200).json({ message: 'Sketch removed from crafting list', craftList });
+    } catch (error) {
+        console.error('Error removing sketch:', error);
+        return res.status(500).json({ message: 'Failed to remove sketch', error });
+    }
+});
+
 module.exports = router;

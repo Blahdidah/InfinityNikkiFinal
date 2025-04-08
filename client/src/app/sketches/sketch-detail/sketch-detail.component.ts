@@ -15,6 +15,7 @@ export class SketchDetailComponent implements OnInit{
     id!: number;
     editingSketch: Sketch | null = null;
     isDeleting: boolean = false;
+    successMessage: string | null = null;
 
 
     constructor(private sketchService: SketchesService,
@@ -30,6 +31,14 @@ export class SketchDetailComponent implements OnInit{
             )
     }
 
+    onSketchAdded() {
+        this.successMessage = `${this.sketch.name} added to your crafting list!`;
+
+        // Clear message after a few seconds
+        setTimeout(() => {
+            this.successMessage = null;
+        }, 3000);
+    }
 
     startEditing(sketch: Sketch) {
         this.editingSketch = { ...sketch }; // shallow copy

@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
-
+import { HttpClient } from '@angular/common/http';
 import { CraftingListService } from './craft-list.service';
 import { Sketch } from '../sketches/sketches.model';
 import { Material } from '../material.model';
@@ -17,7 +17,9 @@ export class CraftListComponent implements OnInit, OnDestroy {
   private sketchesSub!: Subscription;
   loading = true;
 
-  constructor(private craftingListService: CraftingListService) { }
+  constructor(private craftingListService: CraftingListService,
+    private http: HttpClient
+  ) { }
 
   ngOnInit(): void {
     this.craftingListService.fetchCraftListFromServer();
@@ -63,11 +65,17 @@ export class CraftListComponent implements OnInit, OnDestroy {
     return groupedMaterials;
   }
 
-  // Remove sketch from craft list
-  onRemoveSketch(index: number) {
-    const confirmRemove = confirm('Are you sure you want to remove this sketch from the crafting list?');
-    if (confirmRemove) {
-      this.craftingListService.removeSketch(index);
-    }
+  onRemoveSketch(sketchId: string) {
+    this.http.delete(`http://localhost:3000/api/craft-list/remove-from-craft-list/${sketchId}`)
+      .subscribe({
+        next: (res: any) => {
+          console.log(res.message);
+          // Re-fetch or filter the list locally
+          this.craftingList = this.craftingList.filter(s => s._id !== sketchId);
+        },
+        error: err => {
+          console.error('Failed to remove sketch:', err);
+        }
+      });
   }
 }

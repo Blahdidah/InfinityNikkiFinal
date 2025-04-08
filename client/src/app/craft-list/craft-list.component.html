@@ -22,9 +22,9 @@
         <div class="sketches">
             <h3>Sketches Added</h3>
             <ul>
-                <li *ngFor="let sketch of craftingList; let i = index">
+                <li *ngFor="let sketch of craftingList">
                     {{ sketch.name }}
-                    <button (click)="onRemoveSketch(i)">Remove</button>
+                    <button *ngIf="sketch._id" (click)="onRemoveSketch(sketch._id)">Remove</button>
                 </li>
             </ul>
         </div>

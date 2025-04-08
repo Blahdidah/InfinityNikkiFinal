@@ -23,7 +23,9 @@
     <div class="col-2">
     <img class="sketch_img" [src]="sketch.image_url" alt="{{ sketch.name }}" />
     <!-- Add Sketch to Crafting List Button -->
-    <app-sketch-item [sketch]="sketch"></app-sketch-item>
+    <app-sketch-item [sketch]="sketch" (sketchAdded)="onSketchAdded()"></app-sketch-item> <div *ngIf="successMessage" class="success-message">
+        {{ successMessage }}
+    </div>
     <button (click)="editSketch()" class="btn-edit">Edit</button>
     <button (click)="confirmDelete()" class="btn-danger">Delete</button>
     
