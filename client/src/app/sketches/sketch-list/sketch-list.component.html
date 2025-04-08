@@ -1,6 +1,7 @@
-<h2>Sketches available</h2>
-<ul>
-    <li *ngFor="let sketch of sketches" (click)="onSketchClick(sketch)">
-        {{ sketch.name }}
-    </li>
-</ul>
+
+<h3>Sketches:</h3>
+<div class="sketch_wrap">
+    <span *ngFor="let sketch of sketches; let last = last" (click)="onSketchClick(sketch)" class="sketch_button">
+       <span class="sketch_name">{{ sketch.name }}</span><span *ngIf="!last" class="sketch_spc"> ★ </span>
+    </span>
+    </div>

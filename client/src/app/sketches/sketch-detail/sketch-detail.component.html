@@ -8,6 +8,7 @@
         <p><b>Type: </b>{{ sketch.type }}</p>
 
         <div class="sketch-ipie">
+            <h4><u>Materials Needed:</u></h4>
             <ul>
                 <li *ngFor="let material of sketch.materials">
                     <strong>{{ material.material }}</strong>: {{ material.quantity }}
@@ -15,18 +16,21 @@
             </ul>
         </div>
 
-        <!-- Add Sketch to Crafting List Button -->
-        <app-sketch-item [sketch]="sketch"></app-sketch-item>
+       
 
-        <button (click)="editSketch()" class="btn-edit">Edit</button>
-        <button (click)="confirmDelete()" class="btn-danger">Delete</button>
-
-        <div *ngIf="isDeleting" class="delete-confirmation">
-            <p>Are you sure you want to delete this sketch?</p>
-            <button (click)="deleteSketch()" class="btn-danger">Yes, Delete</button>
-            <button (click)="cancelDelete()" class="btn-secondary">Cancel</button>
-        </div>
+       
     </div>
-
+    <div class="col-2">
     <img class="sketch_img" [src]="sketch.image_url" alt="{{ sketch.name }}" />
+    <!-- Add Sketch to Crafting List Button -->
+    <app-sketch-item [sketch]="sketch"></app-sketch-item>
+    <button (click)="editSketch()" class="btn-edit">Edit</button>
+    <button (click)="confirmDelete()" class="btn-danger">Delete</button>
+    
+    <div *ngIf="isDeleting" class="delete-confirmation">
+        <p>Are you sure you want to delete this sketch?</p>
+        <button (click)="deleteSketch()" class="btn-danger">Yes, Delete</button>
+        <button (click)="cancelDelete()" class="btn-secondary">Cancel</button>
+    </div>
+    </div>
 </div>

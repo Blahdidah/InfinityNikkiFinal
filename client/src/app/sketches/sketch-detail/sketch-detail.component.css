@@ -1,35 +1,45 @@
-.details{
-    display:flex;
-    flex-flow:row;
-    width:500px;
+.details {
+    display: flex;
+    flex-flow: row;
+    
     padding-right: 20px;
 }
-.col-1{
-    display:flex;
-    flex-flow:column;
+
+.col-1 {
+    display: flex;
+    flex-flow: column;
     padding: 0px 15px;
+    width:50%
+}
+.col-2{
+    display:flex;
+    flex-flow: column;
+    padding: 0px 15px;
+    width:50%
+}
+.sketch_img {
+    border: 2px solid #ffe5d9;
+    margin-top:10%;
 }
 
-.sketch_img{
-    border: 2px solid #ffe5d9;
-    width: 40%;
-    height: 40%;
-}
 .sketch-ipie ul {
     list-style: none;
+    padding-left: 15px;
 }
 
-.sketch-ipie ul li{
+.sketch-ipie ul li {
     padding: 10px 0px;
 }
 
-.btn-danger, .btn-edit, .addToCL{
+.btn-danger,
+.btn-edit,
+.addToCL {
     font-family: "Delius", cursive;
-        width: 55%;
-        height: 25px;
-        background-color: #FFCAD4;
-        color: #506A4D;
-        font-weight: 600;
-        border-radius: 5px;
-        margin: 10px 0px;
-    }
+    width: 55%;
+    height: 25px;
+    background-color: #FFCAD4;
+    color: #506A4D;
+    font-weight: 600;
+    border-radius: 5px;
+    margin: 10px 0px;
+}

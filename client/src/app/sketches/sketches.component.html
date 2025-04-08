@@ -1,9 +1,8 @@
 <div class="container">
+    <app-sketch-list (sketchSelected)="onSketchSelected($event)" class="sketch-list"></app-sketch-list>
     <div class="sketch_cont">
     
-        <app-sketch-list (sketchSelected)="onSketchSelected($event)" class="sketch-list"></app-sketch-list>
-    
-        <app-sketch-detail *ngIf="selectedSketch" [sketch]="selectedSketch" (editClicked)="onEditSketch($event)" (sketchDeleted)="onSketchDeleted($event)" class="details"></app-sketch-detail>
+        
     <div class="new-sketch-form">
         <h3 *ngIf="!isEditing">Add New Sketch</h3>
         <h3 *ngIf="isEditing">Edit Sketch</h3>
@@ -110,6 +109,8 @@
     
     
     </div>
+    <app-sketch-detail *ngIf="selectedSketch" [sketch]="selectedSketch" (editClicked)="onEditSketch($event)"
+        (sketchDeleted)="onSketchDeleted($event)" class="details"></app-sketch-detail>
 </div>
 
 
